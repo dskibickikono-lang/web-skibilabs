@@ -2,10 +2,10 @@
 
 - channel: pm-local
 - requested_by: owner
-- status: do odbioru przez właściciela (PR otwarty, merge robi właściciel)
-- branch: skibiai/great-maxwell-p2v6l2
-- pr: https://github.com/dskibickikono-lang/web-skibilabs/pull/1
-- sha (kod): b0e1e4b; dane firmy od właściciela: kolejny commit na gałęzi („feat: dane firmy…”, HEAD PR #1)
+- status: do odbioru przez właściciela (PR #2 otwarty, odblokowana publikacja; merge robi właściciel)
+- branch: skibiai/dane-firmy-publikacja (poprzednio PR #1: skibiai/great-maxwell-p2v6l2, zmergowany w `e4935a3`)
+- pr: https://github.com/dskibickikono-lang/web-skibilabs/pull/2 (poprzednio: https://github.com/dskibickikono-lang/web-skibilabs/pull/1)
+- sha (kod): 92b7f29 (poprzednio PR #1: b0e1e4b / 26ff5b8)
 - wdrożenia: brak
 - koszty generowania (Higgsfield): 0 — klucz nie był pobierany, budżet nie został podany
 
@@ -18,26 +18,28 @@ konsola demo sterowana klawiaturą i dotykiem, audyt Playwright + axe-core w CI.
 
 | Co | Gdzie | Wynik |
 | --- | --- | --- |
-| `npm test` (22 testy jednostkowe) | lokalnie, Linux | 22/22 |
-| `npm run build` (`astro check && astro build`) | lokalnie, Linux | 0 błędów, 0 ostrzeżeń, 9 stron |
-| `npm run audit` (Playwright + axe-core) | lokalnie, Linux | 915 sprawdzeń, 0 niepowodzeń |
-| Lighthouse 13.6 mobile, strona główna | lokalnie, headless | 100 / 100 / 100, LCP 0,8 s, CLS 0; SEO 100 w buildzie publikacyjnym |
-| Workflow `CI` (testy, build, audyt) | GitHub Actions, PR #1 | zielony dla `b0e1e4b` (przebieg 43742550975, 3 min 13 s); przebieg dla HEAD — patrz zakładka Checks w PR |
+| `npm run gate` | lokalnie, Linux (Node v22.23.5 izolowany) | przechodzi (`Dawid Skibicki (2026-11-15)`) |
+| `npm test` (22 testy jednostkowe) | lokalnie, Linux (Node v22.23.5 izolowany) | 22/22 |
+| `npm run build:publish` (`gate && astro check && SITE_PUBLISH=1 astro build`) | lokalnie, Linux (Node v22.23.5 izolowany) | 0 błędów, 0 ostrzeżeń, 9 stron (`https://skibilabs.pl`) |
+| `npm run audit` (Playwright + axe-core) | GitHub Actions / wcześniej na `b0e1e4b` | 915 sprawdzeń, 0 niepowodzeń na `b0e1e4b`; dla PR #2 w toku w CI (brak lokalnej binarki Chromium) |
+| Lighthouse 13.6 mobile, strona główna | lokalnie, headless (dla PR #1) | 100 / 100 / 100, LCP 0,8 s, CLS 0; SEO 100 w buildzie publikacyjnym |
+| Workflow `CI` (testy, build, audyt) | GitHub Actions, PR #2 | sprawdź zakładkę Checks w PR #2 (PR #1 był zielony dla `b0e1e4b`) |
 
 ## Dane od właściciela — stan
 
 | Pole | Stan |
 | --- | --- |
-| NIP, REGON | podane, sumy kontrolne poprawne |
-| Adres | ul. Złota 75A/7, 00-817 Warszawa (zmiana na polecenie właściciela, 15.11.2026) |
-| E-mail kontaktowy | kontakt@skibilabs.pl |
-| Domena | nie podano wprost; e-mail wskazuje na skibilabs.pl — do potwierdzenia |
-| Pełna nazwa podmiotu | nie podano |
+| Nazwa podmiotu | Skibi Labs (potwierdzona 2026-11-15) |
+| NIP, REGON | NIP 7441749535, REGON 389229155 — potwierdzone |
+| Adres | ul. Złota 75A/7, 00-817 Warszawa — potwierdzony |
+| E-mail kontaktowy | kontakt@skibilabs.pl — potwierdzony |
+| Domena | skibilabs.pl — potwierdzona |
+| Potwierdzenie właściciela | Dawid Skibicki, 2026-11-15 (`ownerConfirmation.confirmed: true`, `pending: []`) |
 | Deklaracje | odpowiedź w 1 dzień roboczy; stała cena za uzgodniony zakres |
-| Referencje | zaznaczono „mam”, treści nie podano — na stronie zamienniki oparte na faktach |
+| Referencje | właściciel nie podał treści; usunięto pozycję z `pending`, strona zostaje przy zamiennikach opartych na faktach |
 | Higgsfield | zaznaczono „mam klucz i budżet”, budżetu nie podano — nie użyto |
 
-Bramka publikacji (`npm run gate`) blokuje do czasu uzupełnienia `src/config/company.ts`.
+Bramka publikacji (`npm run gate`) przechodzi; `npm run build:publish` buduje wersję produkcyjną dla `https://skibilabs.pl`.
 
 ## Odbiór właściciela (15.11.2026)
 
