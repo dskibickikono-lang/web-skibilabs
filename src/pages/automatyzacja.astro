@@ -1,0 +1,101 @@
+---
+import Band from '../components/Band.astro';
+import Icon from '../components/Icon.astro';
+import PageHero from '../components/PageHero.astro';
+import Base from '../layouts/Base.astro';
+import '../styles/console.css';
+import '../styles/page.css';
+
+const tiles = [
+  { icon: 'code', title: 'Przepływ jako kod', text: 'Każdy przepływ jest plikiem w Twoim repozytorium. Da się go przeczytać, porównać z poprzednią wersją i cofnąć.' },
+  { icon: 'check', title: 'Testy przed wdrożeniem', text: 'Zmiana trafia na serwer dopiero po przejściu testów i przeglądzie. Przypadki brzegowe są zapisane jako testy.' },
+  { icon: 'repeat', title: 'Ponowienia i błędy', text: 'Krok, który się nie udał, jest ponawiany według ustalonej reguły. Jeśli to nie pomoże, dostajesz powiadomienie.' },
+  { icon: 'clock', title: 'Historia przebiegów', text: 'Każdy przebieg zostawia ślad: co weszło, co wyszło i ile trwał każdy krok.' },
+  { icon: 'server', title: 'Dane u Ciebie', text: 'Przepływy działają na Twoim VPS. Dane nie przechodzą przez zewnętrzną platformę automatyzacji.' },
+  { icon: 'target', title: 'Koszt to serwer', text: 'Płacisz za serwer, a nie za liczbę wykonanych operacji. Większy ruch nie zmienia rachunku za samo działanie przepływu.' },
+] as const;
+
+const checks = [
+  ['Przepływ ma test, który przechodzi', 'W repozytorium jest plik testu dla każdego przepływu i wynik ostatniego uruchomienia.'],
+  ['Zmiana ma autora i opis', 'W historii widać, kto zmienił przepływ, kiedy i dlaczego.'],
+  ['Błąd zewnętrznego systemu nie gubi danych', 'Krok jest ponawiany, a nieudany przebieg zostaje w historii z przyczyną.'],
+  ['Przebieg da się odtworzyć', 'Dla każdego uruchomienia zapisane są dane wejściowe i wynik każdego kroku.'],
+] as const;
+---
+
+<Base
+  title="Automatyzacja na własnym serwerze"
+  description="Przepływy pisane jako kod i uruchamiane na serwerze klienta: dane zostają u klienta, zmiany są wersjonowane i testowane, kosztem jest serwer."
+>
+  <PageHero
+    eyebrow="Automatyzacja na własnym serwerze"
+    title="Przepływy jako kod, na Twoim serwerze"
+    lead="Piszemy automatyzacje tak jak resztę oprogramowania: w repozytorium, z testami i przeglądem. Uruchamiamy je na Twoim VPS, więc dane zostają u Ciebie."
+  >
+    <div class="figure card" data-reveal>
+      <p class="figure-bar mono" data-no-typo><span>flows / zamowienia-do-erp.ts</span><span class="cs-tag mono">przykład</span></p>
+      <div class="diff">
+        <pre tabindex="0" aria-label="Zmiana w kodzie przepływu (przykład)"><code><span>  kroki: [</span><span>    pobierz(zamowienie),</span><span>    sprawdz(nip, adres),</span><span class="del">-   wyslij(erp),</span><span class="add">+   wyslij(erp, {'{'} ponow: 3, odstep: '4s' {'}'}),</span><span>    zapisz(wynik),</span><span>  ],</span></code></pre>
+        <ul class="diff-tests" aria-label="Wynik testów (przykład)">
+          <li><span class="cs-state is-ok"><Icon name="check" size={12} /></span>zamówienie poprawne<span class="mono">test</span></li>
+          <li><span class="cs-state is-ok"><Icon name="check" size={12} /></span>zamówienie bez NIP<span class="mono">test</span></li>
+          <li><span class="cs-state is-ok"><Icon name="check" size={12} /></span>ERP nie odpowiada<span class="mono">test</span></li>
+          <li><span class="cs-state is-ok"><Icon name="check" size={12} /></span>zmiana po przeglądzie<span class="mono">przegląd</span></li>
+        </ul>
+      </div>
+    </div>
+  </PageHero>
+
+  <section class="section" aria-labelledby="co-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="co-h">Co dostajesz.<span>Automatyzację, którą można czytać, testować i zmieniać.</span></h2>
+      </div>
+      <ul class="tiles">
+        {
+          tiles.map((t) => (
+            <li class="tile card" data-reveal>
+              <span class="tile-icon"><Icon name={t.icon} size={18} /></span>
+              <h3 class="h3">{t.title}</h3>
+              <p class="small">{t.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="platformy-h">
+    <div class="container-xs prose" data-reveal>
+      <h2 id="platformy-h">Jeśli dziś używasz Make albo n8n</h2>
+      <p>
+        W Make rozliczenie opiera się na kredytach: domyślnie jedna operacja to jeden kredyt. n8n można hostować samodzielnie, także na własnej infrastrukturze.
+      </p>
+      <p>
+        Nasze podejście różni się w jednym punkcie: przepływ jest zwykłym kodem w Twoim repozytorium, więc przechodzi przegląd i testy jak reszta oprogramowania.
+        Istniejące scenariusze przenosimy po kolei, zaczynając od tych, które zmieniają się najczęściej.
+      </p>
+      <p class="note" data-no-typo>Informacje o Make i n8n według ich dokumentacji (help.make.com/credits, docs.n8n.io/hosting), stan na listopad 2026.</p>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="poznasz-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="poznasz-h">Po czym poznasz, że działa.<span>Wszystko widać w repozytorium i w historii przebiegów.</span></h2>
+      </div>
+      <ul class="checks" data-reveal>
+        {
+          checks.map(([title, text]) => (
+            <li>
+              <span class="cs-state is-ok"><Icon name="check" size={12} /></span>
+              <p class="small"><strong>{title}</strong>{text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <Band title="Masz proces, który ktoś dziś przeklikuje ręcznie?" sub="Opisz go w kilku zdaniach. Powiemy, jak wyglądałby jako kod." />
+</Base>

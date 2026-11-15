@@ -1,0 +1,103 @@
+---
+import Band from '../components/Band.astro';
+import Icon from '../components/Icon.astro';
+import PageHero from '../components/PageHero.astro';
+import Base from '../layouts/Base.astro';
+import '../styles/console.css';
+import '../styles/page.css';
+
+const tiles = [
+  { icon: 'doc', title: 'Wstrzykiwanie poleceń', text: 'Sprawdzamy, czy treść, którą agent czyta — wiadomość, dokument, strona — może zmienić cel jego zadania.' },
+  { icon: 'tool', title: 'Nadużycie narzędzi', text: 'Sprawdzamy, czy agent da się nakłonić do użycia narzędzia poza zakresem, do którego zostało dopuszczone.' },
+  { icon: 'eye', title: 'Wyciek danych', text: 'Sprawdzamy, czy do odpowiedzi, logów albo pamięci trafiają dane, które nie powinny się tam znaleźć.' },
+  { icon: 'key', title: 'Nadmiarowe uprawnienia', text: 'Porównujemy to, co agent i jego otoczenie mogą zrobić, z tym, co jest potrzebne do wykonania zadania.' },
+] as const;
+
+const report = [
+  ['Opis ustalenia', 'Co się stało i w jakich warunkach — tak, żeby zespół mógł to powtórzyć.'],
+  ['Dowód', 'Zapis próby, która doprowadziła do ustalenia.'],
+  ['Poprawka', 'Konkretna zmiana w konfiguracji, kodzie albo uprawnieniach.'],
+  ['Priorytet', 'Co naprawić najpierw, a co może poczekać.'],
+] as const;
+---
+
+<Base
+  title="Audyty bezpieczeństwa i red team"
+  description="Testy systemów z agentami AI i ich otoczenia: wstrzykiwanie poleceń, nadużycie narzędzi, wyciek danych, nadmiarowe uprawnienia. Raport z dowodami i poprawkami."
+>
+  <PageHero
+    eyebrow="Audyty bezpieczeństwa i red team"
+    title="Testy systemów z agentami AI i ich otoczenia"
+    lead="W uzgodnionym zakresie sprawdzamy, jak agent zachowuje się pod naciskiem: wstrzykiwanie poleceń, nadużycie narzędzi, wyciek danych i nadmiarowe uprawnienia. Dostajesz raport z dowodami i poprawkami."
+  >
+    <div class="figure card" data-reveal>
+      <p class="figure-bar mono" data-no-typo><span>raport / ustalenia</span><span class="cs-tag mono">przykład</span></p>
+      <div class="report-wrap" tabindex="0" role="region" aria-label="Fragment raportu (przykład)">
+        <table class="report">
+          <thead>
+            <tr><th scope="col">Nr</th><th scope="col">Ustalenie</th><th scope="col">Klasa</th><th scope="col">Priorytet</th><th scope="col">Stan</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="mono">01</td><td>Polecenie w załączonym dokumencie zmienia cel zadania</td><td>wstrzykiwanie poleceń</td><td><span class="cs-chip is-fail">wysoki</span></td><td>do poprawy</td></tr>
+            <tr><td class="mono">02</td><td>Odpowiedź zawiera fragment pamięci innego kontrahenta</td><td>wyciek danych</td><td><span class="cs-chip is-warn">średni</span></td><td>do poprawy</td></tr>
+            <tr><td class="mono">03</td><td>Token narzędzia ma prawo zapisu, choć zadanie wymaga odczytu</td><td>nadmiarowe uprawnienia</td><td><span class="cs-chip is-warn">średni</span></td><td>poprawione</td></tr>
+            <tr><td class="mono">04</td><td>Operacja spoza listy dozwolonych została odrzucona</td><td>nadużycie narzędzi</td><td><span class="cs-chip is-ok">bez uwag</span></td><td>odparte</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </PageHero>
+
+  <section class="section" aria-labelledby="co-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="co-h">Co sprawdzamy.<span>Cztery klasy problemów, każda w uzgodnionym zakresie.</span></h2>
+      </div>
+      <ul class="tiles two">
+        {
+          tiles.map((t) => (
+            <li class="tile card" data-reveal>
+              <span class="tile-icon"><Icon name={t.icon} size={18} /></span>
+              <h3 class="h3">{t.title}</h3>
+              <p class="small">{t.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="raport-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="raport-h">Co jest w raporcie.<span>Każde ustalenie opisane tak, żeby dało się je naprawić.</span></h2>
+      </div>
+      <ul class="checks" data-reveal>
+        {
+          report.map(([title, text]) => (
+            <li>
+              <span class="cs-state is-ok"><Icon name="check" size={12} /></span>
+              <p class="small"><strong>{title}</strong>{text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="granice-h">
+    <div class="container-xs prose" data-reveal>
+      <h2 id="granice-h">Czego test nie daje</h2>
+      <p>
+        Test nie jest gwarancją, że system jest bezpieczny. Pokazuje to, co udało się znaleźć w uzgodnionym zakresie i czasie, oraz to, co agent odparł.
+        Dlatego opisujemy zakres wprost i zostawiamy próby w postaci, którą można powtórzyć po wdrożeniu poprawek.
+      </p>
+      <p>
+        Testujemy wyłącznie za pisemną zgodą właściciela systemu.
+        <a class="inline-link" href="/jak-pracujemy/#autoryzacja">Zasady autoryzacji testów</a> opisują, jak ustalamy zakres i kto może test przerwać.
+      </p>
+    </div>
+  </section>
+
+  <Band title="Chcesz wiedzieć, co Twój agent zrobi pod naciskiem?" sub="Zacznijmy od ustalenia zakresu." />
+</Base>

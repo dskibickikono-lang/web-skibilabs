@@ -1,0 +1,135 @@
+/*
+ * Tokeny wyprowadzone z pomiarów wzorca (docs/art-direction.md, rozdział „Tokeny”).
+ * Każda wartość pisma użyta na stronie musi pochodzić z tej listy — audyt to sprawdza.
+ */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('/fonts/inter-var-pl.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('/fonts/geist-mono-var-pl.woff2') format('woff2');
+}
+/* Zastępniki o metryce dopasowanej do krojów docelowych: podmiana kroju nie przesuwa układu. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90.44%;
+  descent-override: 22.52%;
+  line-gap-override: 0%;
+  size-adjust: 107.12%;
+}
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local('Courier New');
+  ascent-override: 100.5%;
+  descent-override: 29.5%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
+}
+
+:root {
+  /* Kolor: jedna skala szarości na prawie czarnym tle i jeden akcent. */
+  --bg: #07080a;
+  --grey-50: #e6e6e6;
+  --grey-100: #cdcece;
+  --grey-200: #9c9c9d;
+  --grey-300: #85878a;
+  --grey-400: #434345;
+  --grey-500: #2f3031;
+  --grey-600: #1b1c1e;
+  --grey-700: #111214;
+  --grey-800: #0c0d0f;
+  --fg: #fff;
+  --fg-2: var(--grey-200);
+  --fg-3: var(--grey-300);
+  --line: rgb(255 255 255 / 0.06);
+  --line-2: rgb(255 255 255 / 0.1);
+  --surface: rgb(255 255 255 / 0.02);
+  --surface-2: rgb(255 255 255 / 0.05);
+  --surface-3: rgb(255 255 255 / 0.1);
+  --accent: #6ea8ff;
+  --accent-core: #2947ff;
+  /* Stany w oknie produktu (funkcja, nie dekoracja). */
+  --ok: #59d499;
+  --warn: #ffc531;
+  --fail: #ff6b6b;
+
+  /* Pismo */
+  --font-sans: 'Inter', 'Inter Fallback', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', ui-monospace, monospace;
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --fs-11: 0.6875rem;
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-56: 3.5rem;
+  --fs-64: 4rem;
+
+  /* Układ */
+  --container: 1204px;
+  --container-sm: 1064px;
+  --container-xs: 746px;
+  --gutter: 16px;
+  --grid-gap: 32px;
+  --nav-h: 76px;
+  --nav-top: 16px;
+
+  /* Promienie i odstępy */
+  --r-4: 4px;
+  --r-6: 6px;
+  --r-8: 8px;
+  --r-12: 12px;
+  --r-16: 16px;
+  --r-20: 20px;
+  --s-4: 4px;
+  --s-8: 8px;
+  --s-12: 12px;
+  --s-16: 16px;
+  --s-20: 20px;
+  --s-24: 24px;
+  --s-32: 32px;
+  --s-40: 40px;
+  --s-48: 48px;
+  --s-56: 56px;
+  --s-64: 64px;
+  --s-80: 80px;
+  --s-96: 96px;
+  --s-112: 112px;
+  --s-168: 168px;
+  --s-224: 224px;
+
+  /* Ruch */
+  --t-fast: 0.2s;
+  --t-base: 0.3s;
+  --t-slow: 0.4s;
+  --t-enter: 0.7s;
+  --ease: ease;
+  --ease-in-out: ease-in-out;
+  --ease-out-expo: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  /* Cele dotyku */
+  --tap: 40px;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --nav-h: 58px;
+    --grid-gap: 16px;
+  }
+}

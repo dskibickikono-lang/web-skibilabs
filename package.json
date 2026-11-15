@@ -1,0 +1,27 @@
+{
+  "name": "web-skibilabs",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "build:publish": "node scripts/publish-gate.mjs && SITE_PUBLISH=1 astro check && SITE_PUBLISH=1 astro build",
+    "preview": "astro preview",
+    "gate": "node scripts/publish-gate.mjs",
+    "test": "node --test tests/*.test.ts",
+    "audit": "node tests/audit.mjs",
+    "art": "node scripts/render-art.mjs"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/node": "^26.6.6",
+    "astro": "^7.4.12",
+    "axe-core": "^4.14.0",
+    "playwright": "^1.63.0",
+    "typescript": "^6.0.3"
+  }
+}

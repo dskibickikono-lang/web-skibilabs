@@ -1,0 +1,18 @@
+---
+import { company } from '../config/company.ts';
+
+interface Props {
+  title: string;
+  sub: string;
+}
+const { title, sub } = Astro.props;
+---
+
+<section class="band" aria-labelledby="band-h">
+  <h2 class="duo duo-center" id="band-h" data-reveal>
+    {title}
+    <span>{sub}</span>
+  </h2>
+  <a class="btn" href="/kontakt/">Umów rozmowę</a>
+  {company.declarations.responseTime && <p class="note">Odpowiadamy w {company.declarations.responseTime}</p>}
+</section>

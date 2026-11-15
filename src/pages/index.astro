@@ -1,0 +1,440 @@
+---
+import Console from '../components/Console.astro';
+import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+import { company } from '../config/company.ts';
+import Base from '../layouts/Base.astro';
+import '../styles/home.css';
+
+type Key = { l?: string; s?: string; w?: number; f?: number };
+/** Układ klawiatury w sekcji zasad: `f` wskazuje klawisz z zasadą (indeks w `features`). */
+const keyRows: Key[][] = [
+  [{ l: 'esc', w: 1.4 }, { l: 'F1' }, { l: 'F2' }, { l: 'F3' }, { l: 'F4' }, { l: 'F5' }],
+  [{ l: '1', s: '!' }, { l: '2', s: '@' }, { l: '3', s: '#' }, { l: '4', s: '$' }, { l: '5', s: '%' }, { l: '6', s: '^' }],
+  [{ l: 'tab', w: 1.5 }, { f: 0 }, { f: 1 }, { l: 'R' }, { l: 'T' }],
+  [{ f: 2 }, { f: 3 }, { l: 'D' }, { l: 'F' }, { l: 'G' }],
+  [{ l: 'shift', w: 2 }, { l: 'Z' }, { l: 'X' }, { l: 'C' }, { l: 'V' }, { l: 'B' }],
+  [{ l: 'fn' }, { l: 'ctrl' }, { l: 'alt' }, { l: '', w: 3.4 }, { l: 'alt' }],
+];
+const features = [
+  { icon: 'server', lead: 'U Ciebie.', rest: 'Dane zostają na Twoim serwerze.' },
+  { icon: 'code', lead: 'Jako kod.', rest: 'Każda zmiana w repozytorium.' },
+  { icon: 'key', lead: 'Pod kontrolą.', rest: 'Uprawnienia i sekrety opisane wprost.' },
+  { icon: 'shield', lead: 'Sprawdzone.', rest: 'Testujemy to, co stawiamy.' },
+] as const;
+
+const pillars = [
+  {
+    id: 'agenci',
+    href: '/agenci/',
+    icon: 'server',
+    name: 'Agenci AI',
+    text: 'Środowisko, w którym agent działa stabilnie: uruchamianie, kolejki, pamięć, narzędzia, sekrety, uprawnienia i monitoring.',
+  },
+  {
+    id: 'automatyzacja',
+    href: '/automatyzacja/',
+    icon: 'flow',
+    name: 'Automatyzacja',
+    text: 'Przepływy pisane jako kod i uruchamiane na Twoim serwerze. Zmiany są wersjonowane i testowane.',
+  },
+  {
+    id: 'bezpieczenstwo',
+    href: '/bezpieczenstwo/',
+    icon: 'shield',
+    name: 'Bezpieczeństwo',
+    text: 'Testy systemów z agentami AI i ich otoczenia. Wynikiem jest raport z dowodami i poprawkami.',
+  },
+] as const;
+
+const principles = [
+  {
+    id: 'dane',
+    icon: 'server',
+    name: 'Dane zostają u Ciebie',
+    scope: 'Automatyzacja',
+    getChip: 'Serwer i repozytorium na Twoim koncie',
+    get: 'Dostępy są Twoje od pierwszego dnia.',
+    seeChip: 'Brak pośrednika',
+    see: 'Przepływ działa dalej także wtedy, gdy nas już nie ma w projekcie.',
+    before: 'Automatyzacja działa ',
+    mark: 'na Twoim serwerze i z Twojego repozytorium',
+    after: ', a nie na naszym koncie.',
+  },
+  {
+    id: 'uprawnienia',
+    icon: 'key',
+    name: 'Tyle uprawnień, ile trzeba',
+    scope: 'Agenci AI',
+    getChip: 'Lista narzędzi i uprawnień',
+    get: 'Każde narzędzie ma opisany zakres: odczyt, zapis albo blokada.',
+    seeChip: 'Dziennik zdarzeń',
+    see: 'Każde wywołanie narzędzia zostawia ślad, który da się przeczytać.',
+    before: 'Agent dostaje ',
+    mark: 'tyle uprawnień, ile wymaga zadanie',
+    after: ', a każde jego działanie da się odtworzyć.',
+  },
+  {
+    id: 'zgoda',
+    icon: 'shield',
+    name: 'Testy tylko za zgodą',
+    scope: 'Bezpieczeństwo',
+    getChip: 'Raport z dowodami',
+    get: 'Każde ustalenie ma opis, dowód i proponowaną poprawkę.',
+    seeChip: 'Zakres na piśmie',
+    see: 'Przed testem ustalamy, co wolno sprawdzać, kiedy i kto o tym wie.',
+    before: 'Testy prowadzimy ',
+    mark: 'wyłącznie w uzgodnionym zakresie',
+    after: ', a wynikiem są dowody i poprawki.',
+  },
+] as const;
+
+const cta: Key[][] = [
+  [{ l: 'Q' }, { l: 'W' }, { l: 'E' }, { l: 'R' }, { l: 'T' }, { l: 'Y' }, { l: 'U' }, { l: 'I' }, { l: 'O' }, { l: 'P' }],
+  [{ l: 'A' }, { l: 'S' }, { l: 'D' }, { l: 'F' }, { l: 'G' }, { l: 'H' }, { l: 'J' }, { l: 'K' }, { l: 'L' }, { l: 'enter', w: 1.6, f: 1 }],
+  [{ l: 'shift', w: 1.6 }, { l: 'Z' }, { l: 'X' }, { l: 'C' }, { l: 'V' }, { l: 'B' }, { l: 'N' }, { l: 'M' }, { l: '/', s: '?', f: 0 }, { l: 'shift', w: 1.6 }],
+];
+---
+
+<Base
+  title="Skibi Labs"
+  description="Infrastruktura dla agentów AI, automatyzacja na własnym serwerze oraz audyty bezpieczeństwa i red team. Stawiamy, uruchamiamy i sprawdzamy."
+>
+  <Hero />
+
+  <section class="section stage-section" id="konsola" aria-labelledby="konsola-h">
+    <div class="container">
+      <h2 class="duo duo-center" id="konsola-h" data-reveal>
+        Jedna konsola do całej pracy.
+        <span>Wdrożenie, przepływ i test — z klawiatury.</span>
+      </h2>
+      <div class="stage-wrap" data-reveal>
+        <Console uid="home" autoplay />
+      </div>
+    </div>
+  </section>
+
+  <section class="section keys-section" aria-labelledby="zasady-h">
+    <div class="container keys-grid">
+      <div class="keys-copy" data-reveal>
+        <h2 class="duo" id="zasady-h">
+          Nie chodzi o to, żeby mieć agenta.
+          <span>Chodzi o to, żeby rano nadal działał.</span>
+        </h2>
+        <a class="btn" href="/jak-pracujemy/">Zobacz, jak pracujemy</a>
+      </div>
+      <div class="keyboard" data-reveal>
+        {
+          keyRows.map((row) => (
+            <div class="key-row">
+              {row.map((k) => {
+                const f = k.f !== undefined ? features[k.f] : undefined;
+                return f ? (
+                  <div class="key key-feature">
+                    <Icon name={f.icon} size={22} />
+                    <p>
+                      <strong>{f.lead}</strong> {f.rest}
+                    </p>
+                  </div>
+                ) : (
+                  <div class="key" style={`--w:${k.w ?? 1}`} aria-hidden="true">
+                    {k.s && <span class="key-s">{k.s}</span>}
+                    <span>{k.l}</span>
+                  </div>
+                );
+              })}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section pillars-section" aria-labelledby="filary-h">
+    <div class="container">
+      <div class="pillars-head" data-reveal>
+        <h2 class="duo" id="filary-h">
+          Trzy rzeczy, które robimy.
+          <span>Każdą można zamówić osobno. Razem tworzą jeden system.</span>
+        </h2>
+      </div>
+      <ul class="pillars" data-reveal>
+        {
+          pillars.map((p) => (
+            <li class={`pillar pillar-${p.id}`}>
+              <div class="pillar-top">
+                <span class="pillar-icon">
+                  <Icon name={p.icon} size={22} />
+                </span>
+                <h3 class="pillar-name">
+                  <a href={p.href}>{p.name}</a>
+                </h3>
+                <span class="pillar-go" aria-hidden="true">
+                  <Icon name="chevron" size={16} />
+                </span>
+              </div>
+              <p class="pillar-text">{p.text}</p>
+              <div class="pillar-art" aria-hidden="true">
+                {p.id === 'agenci' && (
+                  <div class="wall" data-no-typo>
+                    <p>
+                      <b>uruchamianie</b> <span>kolejki</span>
+                    </p>
+                    <p>
+                      <span>pamięć</span> <b>narzędzia</b>
+                    </p>
+                    <p>
+                      <b>sekrety</b> <span>uprawnienia</span>
+                    </p>
+                    <p>
+                      <span>monitoring</span> <b>dziennik</b>
+                    </p>
+                    <p>
+                      <b>limity</b> <span>ponowienia</span>
+                    </p>
+                  </div>
+                )}
+                {p.id === 'automatyzacja' && (
+                  <pre class="snippet"><code><i>export const</i> zamowieniaDoErp = <b>flow</b>({'{'}
+  wyzwalacz: sklep.<b>noweZamowienie</b>(),
+  kroki: [
+    <b>pobierz</b>(zamowienie),
+    <b>sprawdz</b>(nip, adres),
+    <b>wyslij</b>(erp, {'{'} ponow: <u>3</u> {'}'}),
+    <b>zapisz</b>(wynik),
+  ],
+{'}'});</code></pre>
+                )}
+                {p.id === 'bezpieczenstwo' && (
+                  <div class="rings">
+                    <svg class="rings-arc" viewBox="0 0 320 200" fill="none">
+                      <circle cx="210" cy="190" r="150" stroke="url(#arc-a)" stroke-width="1.5" />
+                      <circle cx="210" cy="190" r="110" stroke="url(#arc-a)" stroke-width="1" opacity="0.6" />
+                      <circle cx="210" cy="190" r="70" stroke="url(#arc-a)" stroke-width="1" opacity="0.35" />
+                      <path d="M210 190 92 96" stroke="#fff" stroke-opacity="0.5" stroke-width="1.25" />
+                      <circle cx="131" cy="127" r="4" fill="#fff" />
+                      <circle cx="258" cy="92" r="3" fill="#fff" fill-opacity="0.5" />
+                      <defs>
+                        <linearGradient id="arc-a" x1="60" y1="40" x2="320" y2="200" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#fff" stop-opacity="0.7" />
+                          <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <ul class="rings-row">
+                      <li class="ring ring-open" />
+                      <li class="ring ring-half" />
+                      <li class="ring ring-fixed" />
+                      <li class="ring ring-done">
+                        <Icon name="check" size={16} />
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section process-section" aria-labelledby="proces-h">
+    <div class="container-sm">
+      <div class="process-head" data-reveal>
+        <p class="eyebrow">Jak pracujemy</p>
+        <h2 class="h2" id="proces-h">Od rozmowy do systemu, który działa</h2>
+        <p class="lead">Wszystko, co stawiamy, trafia do Twojego repozytorium. Możesz to przeczytać, uruchomić i zmienić bez nas.</p>
+      </div>
+      <div class="repo card" data-reveal>
+        <div class="repo-bar">
+          <span class="repo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="mono repo-path" data-no-typo>skibi-klient / flows / zamowienia-do-erp.ts</span>
+          <span class="cs-tag mono">przykład</span>
+        </div>
+        <div class="repo-body">
+          <ul class="repo-tree mono" data-no-typo aria-label="Pliki w repozytorium (przykład)">
+            <li class="d">flows</li>
+            <li class="f on">zamowienia-do-erp.ts</li>
+            <li class="f">faktury-do-ksiegowosci.ts</li>
+            <li class="d">agents</li>
+            <li class="f">agent-faktury/narzedzia.ts</li>
+            <li class="f">agent-faktury/uprawnienia.yaml</li>
+            <li class="d">tests</li>
+            <li class="f">zamowienia-do-erp.test.ts</li>
+            <li class="d">docs</li>
+            <li class="f">runbook.md</li>
+          </ul>
+          <pre class="repo-code" tabindex="0" aria-label="Kod przepływu (przykład)"><code><span class="ln">1</span><i>import</i> {'{'} flow, pobierz, sprawdz, wyslij, zapisz {'}'} <i>from</i> <u>'@skibi/flow'</u>;
+<span class="ln">2</span>
+<span class="ln">3</span><i>export const</i> zamowieniaDoErp = <b>flow</b>({'{'}
+<span class="ln">4</span>  wyzwalacz: sklep.<b>noweZamowienie</b>(),
+<span class="ln">5</span>  kroki: [
+<span class="ln">6</span>    <b>pobierz</b>(zamowienie),
+<span class="ln">7</span>    <b>sprawdz</b>(nip, adres),
+<span class="ln">8</span>    <b>wyslij</b>(erp, {'{'} ponow: <u>3</u>, odstep: <u>'4s'</u> {'}'}),
+<span class="ln">9</span>    <b>zapisz</b>(wynik),
+<span class="ln">10</span>  ],
+<span class="ln">11</span>{'}'});</code></pre>
+        </div>
+        <ul class="repo-checks">
+          <li><span class="cs-state is-ok"><Icon name="check" size={12} /></span>Testy przepływu przechodzą</li>
+          <li><span class="cs-state is-ok"><Icon name="check" size={12} /></span>Zmiana po przeglądzie</li>
+          <li><span class="cs-state is-ok"><Icon name="check" size={12} /></span>Wdrożone na serwerze klienta</li>
+        </ul>
+      </div>
+      <ol class="steps3">
+        <li class="card" data-reveal>
+          <span class="mono step-n">01</span>
+          <h3 class="h3">Rozpoznanie</h3>
+          <p class="small">Ustalamy, co ma działać, na jakich danych i kto za to odpowiada. Dostajesz zakres na piśmie.</p>
+        </li>
+        <li class="card" data-reveal style="--reveal-delay:0.08s">
+          <span class="mono step-n">02</span>
+          <h3 class="h3">Wdrożenie</h3>
+          <p class="small">Stawiamy środowisko i piszemy przepływy. Każda zmiana przechodzi test i przegląd, zanim trafi na serwer.</p>
+        </li>
+        <li class="card" data-reveal style="--reveal-delay:0.16s">
+          <span class="mono step-n">03</span>
+          <h3 class="h3">Przekazanie</h3>
+          <p class="small">Oddajemy repozytorium, opis działania i dostępy. Pokazujemy, jak sprawdzić, że system pracuje.</p>
+        </li>
+      </ol>
+      <p class="process-more" data-reveal>
+        <a class="link" href="/jak-pracujemy/">Zobacz wszystkie etapy <Icon name="arrow" size={14} /></a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section proof-section" aria-labelledby="zasady2-h">
+    <div class="container-sm">
+      <h2 class="duo duo-center" id="zasady2-h" data-reveal>
+        Zamiast opinii — zasady.
+        <span>Tak pracujemy przy każdym zleceniu.</span>
+      </h2>
+      <div class="proof" data-reveal>
+        {principles.map((p, i) => <input class="proof-radio sr-only" type="radio" name="zasada" id={`zasada-${p.id}`} checked={i === 1} />)}
+        <div class="proof-picker" role="group" aria-label="Zasada">
+          {
+            principles.map((p) => (
+              <label class="proof-pick" for={`zasada-${p.id}`}>
+                <span class="proof-avatar">
+                  <Icon name={p.icon} size={20} />
+                </span>
+                <span class="proof-who">
+                  <span class="proof-name">{p.name}</span>
+                  <span class="proof-scope">{p.scope}</span>
+                </span>
+              </label>
+            ))
+          }
+        </div>
+        <div class="proof-line" aria-hidden="true"></div>
+        {
+          principles.map((p) => (
+            <div class="proof-panel">
+              <dl class="proof-facts">
+                <div>
+                  <dt class="mono">Co dostajesz:</dt>
+                  <dd>
+                    <span class="proof-chip">{p.getChip}</span>
+                    <span class="small">{p.get}</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="mono">Po czym poznasz:</dt>
+                  <dd>
+                    <span class="proof-chip">{p.seeChip}</span>
+                    <span class="small">{p.see}</span>
+                  </dd>
+                </div>
+              </dl>
+              <p class="proof-statement">{p.before}<strong>{p.mark}</strong>{p.after}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section bento-section" aria-labelledby="oddajemy-h">
+    <div class="container">
+      <h2 class="duo duo-center" id="oddajemy-h" data-reveal>
+        Co dostajesz do ręki.
+        <span>Rzeczy, które zostają u Ciebie po zakończeniu pracy.</span>
+      </h2>
+      <div class="bento">
+        <article class="card bento-wide" data-reveal>
+          <div class="bento-copy">
+            <h3 class="bento-title"><Icon name="code" size={22} />Kod i opis działania</h3>
+            <p class="small">Przepływy, konfiguracja agentów i runbook są w Twoim repozytorium. Każda zmiana ma autora, opis i test.</p>
+          </div>
+          <div class="bento-art bento-art-wide" aria-hidden="true">
+            <div class="commits mono" data-no-typo>
+              <p><i>a3f9c1e</i> ponowienie kroku „wyślij” po błędzie 503</p>
+              <p><i>7d02b4a</i> test: zamówienie bez NIP</p>
+              <p><i>41c8e90</i> uprawnienia: erp.platnosc zablokowane</p>
+            </div>
+          </div>
+        </article>
+        <article class="card bento-half" data-reveal>
+          <div class="bento-art" aria-hidden="true">
+            <div class="finding">
+              <p class="finding-top mono"><span>Ustalenie 02</span><span class="cs-chip is-fail">priorytet wysoki</span></p>
+              <p class="finding-t">Polecenie w załączonym dokumencie zmienia cel zadania</p>
+              <dl>
+                <div><dt>Dowód</dt><dd>zapis sesji testowej</dd></div>
+                <div><dt>Poprawka</dt><dd>oddzielić treść dokumentów od instrukcji</dd></div>
+                <div><dt>Ponowny test</dt><dd>po wdrożeniu poprawki</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="bento-copy">
+            <h3 class="bento-title"><Icon name="shield" size={22} />Raport z audytu</h3>
+            <p class="small">Każde ustalenie ma opis, dowód i poprawkę. Bez ocen ogólnych i bez straszenia.</p>
+          </div>
+        </article>
+        <article class="card bento-half" data-reveal style="--reveal-delay:0.08s">
+          <div class="bento-art bento-keys" aria-hidden="true">
+            <span class="hotkey"><span>/</span><small>otwórz</small></span>
+            <i>→</i>
+            <span class="hotkey"><span>↑↓</span><small>wybierz</small></span>
+            <i>→</i>
+            <span class="hotkey"><span>↵</span><small>uruchom</small></span>
+          </div>
+          <div class="bento-copy">
+            <h3 class="bento-title"><Icon name="terminal" size={22} />Konsola do sprawdzenia</h3>
+            <p class="small">
+              Zanim napiszesz, zobacz trzy scenariusze w <a class="inline-link" href="/konsola/">konsoli demo</a>. Działa z klawiatury i dotykiem.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" aria-labelledby="cta-h">
+    <div class="cta-keys" aria-hidden="true">
+      {
+        cta.map((row) => (
+          <div class="key-row">
+            {row.map((k) => (
+              <div class:list={['key', k.f !== undefined && 'key-lit']} style={`--w:${k.w ?? 1}`}>
+                {k.s && <span class="key-s">{k.s}</span>}
+                <span>{k.l}</span>
+              </div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+    <div class="cta-copy" data-reveal>
+      <h2 class="duo duo-center" id="cta-h">
+        Zacznij od rozmowy.
+        <span>Opisz, co chcesz uruchomić albo sprawdzić.</span>
+      </h2>
+      <a class="btn" href="/kontakt/">Umów rozmowę</a>
+      {company.declarations.responseTime && <p class="note">Odpowiadamy w {company.declarations.responseTime}</p>}
+    </div>
+  </section>
+</Base>

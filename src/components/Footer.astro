@@ -1,0 +1,154 @@
+---
+import { addressLine, company } from '../config/company.ts';
+import { FOOTER } from '../config/site.ts';
+import Logo from './Logo.astro';
+
+const address = addressLine();
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer-art" aria-hidden="true"></div>
+  <div class="container-sm footer-grid">
+    <div class="footer-brand">
+      <a class="footer-logo" href="/" aria-label="Skibi Labs — strona główna"><Logo uid="footer" /><span>Skibi Labs</span></a>
+      <p class="small">Infrastruktura dla agentów AI, automatyzacja na własnym serwerze i testy bezpieczeństwa.</p>
+    </div>
+    {
+      FOOTER.map((col) => (
+        <nav class="footer-col" aria-label={col.title}>
+          <p class="footer-title">{col.title}</p>
+          <ul>
+            {col.links.map((l) => (
+              <li>
+                <a href={l.href}>{l.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))
+    }
+  </div>
+  <div class="container-sm footer-legal">
+    <p>
+      {company.legalName ?? company.brand}
+      {company.nip && <span> · NIP {company.nip}</span>}
+      {company.regon && <span> · REGON {company.regon}</span>}
+      {address && <span> · {address}</span>}
+    </p>
+    <p>
+      {
+        company.email ? (
+          <a class="inline-link" href={`mailto:${company.email}`}>
+            {company.email}
+          </a>
+        ) : (
+          <span data-placeholder>adres e-mail: do uzupełnienia przed publikacją</span>
+        )
+      }
+      <span> · © {year}</span>
+    </p>
+  </div>
+</footer>
+
+<style is:global>
+  .footer {
+    position: relative;
+    margin-top: 300px;
+    border-top: 1px solid var(--line);
+    padding-block: var(--s-80) var(--s-48);
+  }
+  .footer-art {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: min(100%, 620px);
+    aspect-ratio: 1200 / 420;
+    transform: translateX(-50%);
+    background: url('/art/footer.webp') center bottom / cover no-repeat;
+    opacity: 0.9;
+    -webkit-mask-image: radial-gradient(50% 100% at 50% 100%, #000 25%, transparent 100%);
+    mask-image: radial-gradient(50% 100% at 50% 100%, #000 25%, transparent 100%);
+    pointer-events: none;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
+    gap: var(--s-32);
+  }
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: var(--tap);
+    font-size: var(--fs-16);
+    font-weight: var(--w-semibold);
+    line-height: 1.5;
+  }
+  .footer-brand .small {
+    max-width: 280px;
+    margin-top: var(--s-8);
+    color: var(--fg-3);
+  }
+  .footer-title {
+    margin-bottom: var(--s-12);
+    font-size: var(--fs-14);
+    font-weight: var(--w-medium);
+    line-height: 40px;
+    letter-spacing: 0.2px;
+  }
+  .footer-col a {
+    display: flex;
+    align-items: center;
+    min-height: var(--tap);
+    padding-block: 10px;
+    font-size: var(--fs-14);
+    font-weight: var(--w-medium);
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--fg-2);
+    transition: color var(--t-base) var(--ease);
+  }
+  .footer-col a:hover {
+    color: var(--fg);
+  }
+  .footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--s-8) var(--s-32);
+    margin-top: var(--s-64);
+    padding-top: var(--s-24);
+    border-top: 1px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: var(--fs-12);
+    font-weight: var(--w-regular);
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    color: var(--fg-3);
+  }
+  .footer-legal .inline-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap);
+    color: var(--fg-2);
+  }
+  [data-placeholder] {
+    color: var(--warn);
+  }
+  @media (max-width: 720px) {
+    .footer {
+      margin-top: 200px;
+      padding-block: var(--s-48) var(--s-32);
+    }
+    .footer-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+    .footer-legal {
+      margin-top: var(--s-40);
+    }
+  }
+</style>

@@ -1,0 +1,29 @@
+---
+/** Znak: trzy ukośne smugi w zaokrąglonym kwadracie — ta sama rodzina co grafiki strony. */
+interface Props {
+  size?: number;
+  /** Przyrostek identyfikatorów gradientu — znak występuje na stronie dwa razy. */
+  uid: string;
+}
+const { size = 22, uid } = Astro.props;
+const g = `logo-g-${uid}`;
+const c = `logo-c-${uid}`;
+---
+
+<svg class="logo" width={size} height={size} viewBox="0 0 22 22" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id={g} x1="3" y1="2" x2="19" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58b4ff"></stop>
+      <stop offset="0.55" stop-color="#2947ff"></stop>
+      <stop offset="1" stop-color="#1b0e8a"></stop>
+    </linearGradient>
+    <clipPath id={c}><rect x="1" y="1" width="20" height="20" rx="6"></rect></clipPath>
+  </defs>
+  <rect x="1" y="1" width="20" height="20" rx="6" fill="#0c0d0f"></rect>
+  <g clip-path={`url(#${c})`} stroke={`url(#${g})`} stroke-width="3.4" stroke-linecap="round">
+    <path d="M2 9.5 9.5 17"></path>
+    <path d="M6 4.5 17.5 16"></path>
+    <path d="M12.5 5 20 12.5"></path>
+  </g>
+  <rect x="1.5" y="1.5" width="19" height="19" rx="5.5" stroke="#fff" stroke-opacity="0.14"></rect>
+</svg>

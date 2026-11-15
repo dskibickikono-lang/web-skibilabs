@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  ASTRO_TELEMETRY_DISABLED: '1'
+
+jobs:
+  verify:
+    name: Testy, build i audyt
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Testy jednostkowe
+        run: npm test
+      - name: Build (astro check && astro build)
+        run: npm run build
+      - name: Chromium dla audytu
+        run: npx playwright install --with-deps chromium
+      - name: Audyt (Playwright + axe-core)
+        run: npm run audit
+      - name: Bramka publikacji (informacyjnie — blokuje tylko build:publish)
+        run: npm run gate || echo "::notice::Publikacja zablokowana do czasu potwierdzenia danych firmy w src/config/company.ts"
