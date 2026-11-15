@@ -52,7 +52,7 @@ export interface CompanyConfig {
 
 export const company: CompanyConfig = {
   brand: 'Skibi Labs',
-  legalName: null,
+  legalName: 'Skibi Labs',
   nip: '7441749535',
   regon: '389229155',
   address: {
@@ -60,7 +60,7 @@ export const company: CompanyConfig = {
     postalCode: '00-817',
     city: 'Warszawa',
   },
-  domain: null,
+  domain: 'skibilabs.pl',
   email: 'kontakt@skibilabs.pl',
   declarations: {
     responseTime: '1 dzień roboczy',
@@ -69,15 +69,11 @@ export const company: CompanyConfig = {
     auditReport: null,
   },
   references: [],
-  pending: [
-    'domain — nie podano wprost; adres e-mail wskazuje na skibilabs.pl, do potwierdzenia',
-    'legalName — pełna nazwa podmiotu z formą prawną',
-    'references — zaznaczono „mam”, ale treści nie podano; sekcja używa zamienników opartych na faktach',
-  ],
+  pending: [],
   ownerConfirmation: {
-    confirmed: false,
-    confirmedBy: null,
-    confirmedAt: null,
+    confirmed: true,
+    confirmedBy: 'Dawid Skibicki',
+    confirmedAt: '2026-11-15',
   },
 };
 
