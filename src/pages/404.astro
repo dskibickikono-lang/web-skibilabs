@@ -1,0 +1,14 @@
+---
+import PageHero from '../components/PageHero.astro';
+import Base from '../layouts/Base.astro';
+import '../styles/page.css';
+---
+
+<Base title="Nie ma takiej strony" description="Strona o tym adresie nie istnieje." noindex>
+  <PageHero eyebrow="Błąd 404" title="Nie ma takiej strony" lead="Adres mógł się zmienić albo zawiera literówkę. Wróć na stronę główną albo otwórz konsolę i wpisz, czego szukasz." actions={false}>
+    <div class="page-actions">
+      <a class="btn" href="/">Strona główna</a>
+      <a class="link" href="/konsola/">Otwórz konsolę demo</a>
+    </div>
+  </PageHero>
+</Base>

@@ -1,0 +1,76 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+import { company, isPublishBuild, siteOrigin } from '../config/company.ts';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Strony, których nie chcemy w wyszukiwarkach niezależnie od trybu builda (np. 404). */
+  noindex?: boolean;
+}
+const { title, description, noindex = false } = Astro.props;
+const fullTitle = title === company.brand ? title : `${title} — ${company.brand}`;
+const canonical = new URL(Astro.url.pathname, siteOrigin).href;
+// Dopóki właściciel nie potwierdzi danych firmy, żadna strona nie zgłasza się do indeksu.
+const indexable = isPublishBuild(process.env) && !noindex;
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={indexable ? 'index, follow' : 'noindex, nofollow'} />
+    <meta name="theme-color" content="#07080a" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/inter-var-pl.woff2" as="font" type="font/woff2" crossorigin />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:site_name" content={company.brand} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip" href="#tresc">Przejdź do treści</a>
+    <Nav />
+    <main id="tresc">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      // Odsłanianie sekcji. Odsłaniamy też to, co zostało nad oknem (skok kotwicą,
+      // odświeżenie w połowie strony), żeby nic nie zostało niewidoczne.
+      const items = document.querySelectorAll<HTMLElement>('[data-reveal]');
+      if (items.length > 0) {
+        if (!('IntersectionObserver' in window)) {
+          for (const el of items) el.classList.add('is-in');
+        } else {
+          const io = new IntersectionObserver(
+            (entries) => {
+              for (const e of entries) {
+                if (e.isIntersecting || e.boundingClientRect.top < 0) {
+                  e.target.classList.add('is-in');
+                  io.unobserve(e.target);
+                }
+              }
+            },
+            { rootMargin: '0px 0px -8% 0px' },
+          );
+          for (const el of items) io.observe(el);
+        }
+      }
+    </script>
+  </body>
+</html>

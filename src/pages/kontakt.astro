@@ -1,0 +1,167 @@
+---
+import PageHero from '../components/PageHero.astro';
+import { addressLine, company } from '../config/company.ts';
+import Base from '../layouts/Base.astro';
+import { TOPICS } from '../lib/contact.ts';
+import '../styles/page.css';
+
+const address = addressLine();
+const d = company.declarations;
+---
+
+<Base title="Kontakt" description="Napisz do Skibi Labs: opisz, co chcesz uruchomić albo sprawdzić. Formularz otwiera przygotowaną wiadomość e-mail.">
+  <PageHero
+    eyebrow="Kontakt"
+    title="Opisz, co chcesz uruchomić albo sprawdzić"
+    lead="Formularz niczego nie wysyła na serwer. Przygotowuje wiadomość, którą wysyłasz ze swojej poczty."
+    actions={false}
+  >
+    <div class="contact figure-free">
+      <form class="form card" data-contact data-to={company.email ?? ''} action={`mailto:${company.email ?? ''}`} method="post" enctype="text/plain" novalidate>
+        <div class="field">
+          <label for="f-name">Imię i nazwisko</label>
+          <input class="input" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name" />
+          <p class="error" id="e-name" data-error="name" hidden></p>
+        </div>
+        <div class="field">
+          <label for="f-email">E-mail do odpowiedzi</label>
+          <input class="input" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="e-email" />
+          <p class="error" id="e-email" data-error="email" hidden></p>
+        </div>
+        <div class="field">
+          <label for="f-company">Firma <span class="opt">(opcjonalnie)</span></label>
+          <input class="input" id="f-company" name="company" type="text" autocomplete="organization" />
+        </div>
+        <fieldset class="choices">
+          <legend>Czego dotyczy sprawa</legend>
+          {
+            TOPICS.map((t, i) => (
+              <label class="choice">
+                <input type="radio" name="topic" value={t} checked={i === TOPICS.length - 1} />
+                <span>{t}</span>
+              </label>
+            ))
+          }
+        </fieldset>
+        <div class="field">
+          <label for="f-message">Wiadomość</label>
+          <textarea class="input" id="f-message" name="message" rows="6" required aria-describedby="e-message"></textarea>
+          <p class="error" id="e-message" data-error="message" hidden></p>
+        </div>
+        <div class="form-foot">
+          <button class="btn" type="submit">Przygotuj wiadomość</button>
+          <p class="form-status" role="status" data-status></p>
+        </div>
+        <div class="field" data-fallback hidden>
+          <label for="f-copy">Jeśli program pocztowy się nie otworzył, skopiuj treść</label>
+          <textarea class="input mono" id="f-copy" rows="7" readonly data-copy-text></textarea>
+          <div class="form-foot">
+            <button class="btn btn-ghost" type="button" data-copy>Kopiuj treść</button>
+          </div>
+        </div>
+      </form>
+      <aside class="aside" aria-label="Dane kontaktowe">
+        <dl>
+          <div>
+            <dt>E-mail</dt>
+            <dd>
+              {
+                company.email ? (
+                  <a class="inline-link" href={`mailto:${company.email}`}>{company.email}</a>
+                ) : (
+                  <span data-placeholder>do uzupełnienia przed publikacją</span>
+                )
+              }
+            </dd>
+          </div>
+          {d.responseTime && (
+            <div>
+              <dt>Czas odpowiedzi</dt>
+              <dd>{d.responseTime}</dd>
+            </div>
+          )}
+          {d.billing && (
+            <div>
+              <dt>Rozliczenie</dt>
+              <dd>{d.billing}, po rozmowie i spisaniu zakresu</dd>
+            </div>
+          )}
+          <div>
+            <dt>Firma</dt>
+            <dd>
+              {company.legalName ?? company.brand}
+              {company.nip && <><br />NIP {company.nip}</>}
+              {company.regon && <><br />REGON {company.regon}</>}
+            </dd>
+          </div>
+          {address && (
+            <div>
+              <dt>Adres</dt>
+              <dd>{address}</dd>
+            </div>
+          )}
+        </dl>
+        <p class="small">
+          Jak przetwarzamy dane z korespondencji, opisuje <a class="inline-link" href="/polityka-prywatnosci/">polityka prywatności</a>.
+        </p>
+      </aside>
+    </div>
+  </PageHero>
+</Base>
+
+<script>
+  import { buildMailto, composeBody, composeSubject, validate, type ContactData } from '../lib/contact.ts';
+
+  const form = document.querySelector<HTMLFormElement>('[data-contact]');
+  if (form) {
+    const status = form.querySelector<HTMLElement>('[data-status]');
+    const fallback = form.querySelector<HTMLElement>('[data-fallback]');
+    const copyText = form.querySelector<HTMLTextAreaElement>('[data-copy-text]');
+    const copyBtn = form.querySelector<HTMLButtonElement>('[data-copy]');
+    const read = (): ContactData => {
+      const fd = new FormData(form);
+      const get = (k: string): string => String(fd.get(k) ?? '');
+      return { name: get('name'), email: get('email'), company: get('company'), topic: get('topic'), message: get('message') };
+    };
+    const showErrors = (errors: ReturnType<typeof validate>): HTMLElement | null => {
+      let first: HTMLElement | null = null;
+      for (const key of ['name', 'email', 'message'] as const) {
+        const field = form.elements.namedItem(key);
+        const box = form.querySelector<HTMLElement>(`[data-error="${key}"]`);
+        const msg = errors[key];
+        if (!(field instanceof HTMLElement) || !box) continue;
+        field.setAttribute('aria-invalid', msg ? 'true' : 'false');
+        box.textContent = msg ?? '';
+        box.hidden = !msg;
+        if (msg && !first) first = field;
+      }
+      return first;
+    };
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = read();
+      const first = showErrors(validate(data));
+      if (first) {
+        if (status) status.textContent = 'Popraw zaznaczone pola.';
+        first.focus();
+        return;
+      }
+      const to = form.dataset['to'] || null;
+      if (copyText) copyText.value = `Temat: ${composeSubject(data)}\n\n${composeBody(data)}`;
+      if (fallback) fallback.hidden = false;
+      if (status) status.textContent = to ? 'Otwieramy wiadomość w Twoim programie pocztowym.' : 'Otwieramy wiadomość. Adres odbiorcy wpisz ręcznie.';
+      window.location.href = buildMailto(to, data);
+    });
+    copyBtn?.addEventListener('click', () => {
+      if (!copyText) return;
+      void navigator.clipboard?.writeText(copyText.value).then(
+        () => {
+          copyBtn.textContent = 'Skopiowano';
+        },
+        () => {
+          copyText.select();
+        },
+      );
+    });
+  }
+</script>

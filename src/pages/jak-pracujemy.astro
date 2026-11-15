@@ -1,0 +1,101 @@
+---
+import Band from '../components/Band.astro';
+import Icon from '../components/Icon.astro';
+import PageHero from '../components/PageHero.astro';
+import { company } from '../config/company.ts';
+import Base from '../layouts/Base.astro';
+import '../styles/console.css';
+import '../styles/page.css';
+
+const d = company.declarations;
+const stages = [
+  {
+    title: 'Rozmowa',
+    text: 'Opowiadasz, co ma działać albo co chcesz sprawdzić. Pytamy o dane, systemy i osoby, które za nie odpowiadają.',
+    gets: [d.responseTime ? `Odpowiedź na zapytanie w ${d.responseTime}` : null, 'Lista pytań, na które potrzebujemy odpowiedzi'],
+  },
+  {
+    title: 'Zakres i wycena',
+    text: 'Spisujemy, co powstanie, na jakim serwerze i po czym uznamy pracę za skończoną.',
+    gets: ['Zakres na piśmie', d.billing ? `Rozliczenie: ${d.billing}` : null, 'Kryteria odbioru'],
+  },
+  {
+    title: 'Wdrożenie albo test',
+    text: 'Pracujemy w Twoim repozytorium i na Twoim serwerze. Każda zmiana przechodzi test i przegląd, zanim trafi dalej.',
+    gets: ['Dostęp do repozytorium od pierwszego dnia', 'Postęp widoczny w historii zmian'],
+  },
+  {
+    title: 'Przekazanie',
+    text: 'Pokazujemy, jak system działa i jak samodzielnie sprawdzić, że działa dalej.',
+    gets: ['Repozytorium i opis działania (runbook)', 'Dostępy i lista sekretów do wymiany', 'Przy audycie: raport z dowodami i poprawkami'],
+  },
+];
+
+const rules = [
+  ['Zgoda na piśmie', 'Testujemy tylko systemy, których właściciel wyraził pisemną zgodę. Bez niej nie zaczynamy.'],
+  ['Uzgodniony zakres', 'Przed testem ustalamy, co sprawdzamy, kiedy i jakimi metodami. Poza zakres nie wychodzimy.'],
+  ['Najpierw środowisko testowe', 'Jeśli istnieje, zaczynamy od niego. Testy na systemie produkcyjnym wymagają osobnej decyzji.'],
+  ['Systemy stron trzecich', 'Usługi zewnętrznych dostawców sprawdzamy tylko w granicach, na które pozwalają ich zasady.'],
+  ['Zatrzymanie na żądanie', 'Wskazana osoba po Twojej stronie może przerwać test w każdej chwili.'],
+  ['Poufność ustaleń', 'Raport trafia wyłącznie do osób, które wskażesz. Dane napotkane podczas testu zostają w uzgodnionym środowisku.'],
+] as const;
+---
+
+<Base
+  title="Jak pracujemy"
+  description="Etapy współpracy ze Skibi Labs, to, co klient dostaje na każdym z nich, oraz zasady autoryzacji testów bezpieczeństwa."
+>
+  <PageHero
+    eyebrow="Jak pracujemy"
+    title="Cztery etapy i to, co dostajesz na każdym"
+    lead="Bez abonamentu na obietnice. Ustalamy zakres, robimy to, co ustalone, i oddajemy rzeczy, które zostają u Ciebie."
+  />
+
+  <section class="section-tight" aria-label="Etapy">
+    <div class="container-sm">
+      <ol class="stages">
+        {
+          stages.map((s, i) => (
+            <li class="stage-item card" data-reveal>
+              <span class="mono step-n">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h2 class="h3">{s.title}</h2>
+                <p class="small">{s.text}</p>
+              </div>
+              <ul class="gets" aria-label="Co dostajesz">
+                {s.gets
+                  .filter((g): g is string => g !== null)
+                  .map((g) => (
+                    <li>
+                      <span class="cs-state is-ok"><Icon name="check" size={12} /></span>
+                      {g}
+                    </li>
+                  ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="autoryzacja" aria-labelledby="autoryzacja-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="autoryzacja-h">Zasady autoryzacji testów bezpieczeństwa.<span>Obowiązują przy każdym audycie i teście red team.</span></h2>
+      </div>
+      <ol class="rules">
+        {
+          rules.map(([title, text]) => (
+            <li class="rule card" data-reveal>
+              <h3 class="h3">{title}</h3>
+              <p class="small">{text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <Band title="Zacznij od rozmowy." sub="Opisz, co chcesz uruchomić albo sprawdzić." />
+</Base>

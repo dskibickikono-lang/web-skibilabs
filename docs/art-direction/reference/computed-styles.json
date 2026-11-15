@@ -1,0 +1,3350 @@
+{
+ "390": {
+  "header": {
+   "tag": "DIV",
+   "text": "StoreProAIiOSWindowsTeamsEnterpriseBlogPricingLog ",
+   "w": 390,
+   "h": 74,
+   "x": 0,
+   "y": 0,
+   "font": "Inter",
+   "size": "16px",
+   "lh": "18.4px",
+   "weight": "400",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "border": "0px rgb(255, 255, 255)",
+   "pad": "16px 16px 0px",
+   "shadow": "none",
+   "transition": "all",
+   "position": "fixed",
+   "backdropFilter": "none",
+   "top": "0px"
+  },
+  "navCard": {
+   "tag": "DIV",
+   "text": "StoreProAIiOSWindowsTeamsEnterpriseBlogPricingLog ",
+   "w": 358,
+   "h": 58,
+   "x": 16,
+   "y": 16,
+   "font": "Inter",
+   "size": "16px",
+   "lh": "18.4px",
+   "weight": "400",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "16px",
+   "border": "1px rgba(255, 255, 255, 0.06)",
+   "pad": "16px",
+   "shadow": "rgba(255, 255, 255, 0.15) 0px 1px 1px 0px inset",
+   "transition": "height 0.3s, transform 0.3s",
+   "backdropFilter": "blur(5px)",
+   "backgroundImage": "linear-gradient(137deg, rgba(17, 18, 20, 0.75) 4.87%, rgba(12, 13, 15, 0.9) 75.88%)"
+  },
+  "navLinks": [
+   {
+    "tag": "A",
+    "text": "",
+    "w": 0,
+    "h": 0,
+    "x": 0,
+    "y": 0,
+    "font": "Inter",
+    "size": "16px",
+    "lh": "18.4px",
+    "weight": "400",
+    "ls": "normal",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "border": "0px rgb(255, 255, 255)",
+    "pad": "0px",
+    "shadow": "none",
+    "transition": "all"
+   },
+   {
+    "tag": "A",
+    "text": "Store",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 105,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Pro",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 150,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "AI",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 195,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "iOS",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 240,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Windows",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 285,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Teams",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 330,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Enterprise",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 375,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Blog",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 420,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Pricing",
+    "w": 324,
+    "h": 41,
+    "x": 33,
+    "y": 465,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Log in",
+    "w": 58,
+    "h": 41,
+    "x": 33,
+    "y": 571,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Download",
+    "w": 0,
+    "h": 0,
+    "x": 0,
+    "y": 0,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "16px",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(47, 48, 49)",
+    "bg": "rgb(230, 230, 230)",
+    "radius": "8px",
+    "border": "0px rgb(47, 48, 49)",
+    "pad": "8px 12px",
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+    "transition": "background-image 0.2s, background-color 0.2s, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out"
+   }
+  ],
+  "h1": {
+   "tag": "H1",
+   "text": "Your shortcut to everything.",
+   "w": 358,
+   "h": 79,
+   "x": 16,
+   "y": 260,
+   "font": "Inter",
+   "size": "36px",
+   "lh": "39.6px",
+   "weight": "600",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "border": "0px rgb(255, 255, 255)",
+   "pad": "0px",
+   "shadow": "none",
+   "transition": "all",
+   "maxWidth": "440px",
+   "textWrap": "wrap"
+  },
+  "heroP": {
+   "tag": "P",
+   "text": "A collection of powerful productivity tools all wi",
+   "w": 358,
+   "h": 51,
+   "x": 16,
+   "y": 371,
+   "font": "Inter",
+   "size": "14px",
+   "lh": "normal",
+   "weight": "400",
+   "ls": "0.2px",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "border": "0px rgb(255, 255, 255)",
+   "pad": "0px",
+   "shadow": "none",
+   "transition": "all"
+  },
+  "buttons": [
+   {
+    "tag": "A",
+    "text": "Download",
+    "w": 0,
+    "h": 0,
+    "x": 0,
+    "y": 0,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "16px",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(47, 48, 49)",
+    "bg": "rgb(230, 230, 230)",
+    "radius": "8px",
+    "border": "0px rgb(47, 48, 49)",
+    "pad": "8px 12px",
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+    "transition": "background-image 0.2s, background-color 0.2s, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out",
+    "backgroundImage": "none",
+    "gap": "8px"
+   },
+   {
+    "tag": "A",
+    "text": "Download for Mac",
+    "w": 0,
+    "h": 0,
+    "x": 0,
+    "y": 0,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "16px",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(47, 48, 49)",
+    "bg": "rgb(230, 230, 230)",
+    "radius": "8px",
+    "border": "0px rgb(47, 48, 49)",
+    "pad": "8px 12px",
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+    "transition": "background-image 0.2s, background-color 0.2s, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out",
+    "backgroundImage": "none",
+    "gap": "8px"
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Download V1",
+    "w": 0,
+    "h": 0,
+    "x": 0,
+    "y": 0,
+    "font": "GeistMono",
+    "size": "12px",
+    "lh": "19.2px",
+    "weight": "400",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "4px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "0px",
+    "shadow": "none",
+    "transition": "color 0.2s",
+    "backgroundImage": "none",
+    "gap": "normal"
+   },
+   {
+    "tag": "A",
+    "text": "Download",
+    "w": 0,
+    "h": 0,
+    "x": 0,
+    "y": 0,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "16px",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(47, 48, 49)",
+    "bg": "rgb(230, 230, 230)",
+    "radius": "8px",
+    "border": "0px rgb(47, 48, 49)",
+    "pad": "8px 12px",
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+    "transition": "background-image 0.2s, background-color 0.2s, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out",
+    "backgroundImage": "none",
+    "gap": "8px"
+   }
+  ],
+  "h2": [
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Take shortcuts, not detours.",
+     "w": 316,
+     "h": 29,
+     "x": 37,
+     "y": 823,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "One interface, everything you need.",
+     "w": 316,
+     "h": 29,
+     "x": 37,
+     "y": 852,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 316
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "It’s not about saving time.",
+     "w": 272,
+     "h": 29,
+     "x": 59,
+     "y": 2321,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "It’s about feeling like you’re never wasting it.",
+     "w": 272,
+     "h": 58,
+     "x": 59,
+     "y": 2350,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 272
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "There’s an extension for that.",
+     "w": 342,
+     "h": 29,
+     "x": 24,
+     "y": 2599,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Use your favorite tools without even opening them.",
+     "w": 342,
+     "h": 58,
+     "x": 24,
+     "y": 2628,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 342
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Meet your new virtual assistant",
+     "w": 350,
+     "h": 77,
+     "x": 20,
+     "y": 3729,
+     "font": "Inter",
+     "size": "32px",
+     "lh": "38.4px",
+     "weight": "500",
+     "ls": "-0.8px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Raycast AI uses the tools you already rely on to g",
+     "w": 350,
+     "h": 45,
+     "x": 20,
+     "y": 3820,
+     "font": "Inter",
+     "size": "15px",
+     "lh": "22.5px",
+     "weight": "400",
+     "ls": "0.15px",
+     "color": "rgba(255, 255, 255, 0.5)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgba(255, 255, 255, 0.5)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 350
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Built for professionals like you.",
+     "w": 342,
+     "h": 29,
+     "x": 24,
+     "y": 5349,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Used by seriously productive people.",
+     "w": 342,
+     "h": 29,
+     "x": 24,
+     "y": 5378,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 342
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Don't repeat yourself.",
+     "w": 342,
+     "h": 29,
+     "x": 24,
+     "y": 6223,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Automate the things you do all the time.",
+     "w": 342,
+     "h": 58,
+     "x": 24,
+     "y": 6252,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 342
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Task list",
+     "w": 143,
+     "h": 9,
+     "x": 123,
+     "y": 7894,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "22.5px",
+     "weight": "600",
+     "ls": "-0.12px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "UL",
+     "text": "Collect and go through beta feedbackAdd settings e",
+     "w": 143,
+     "h": 67,
+     "x": 123,
+     "y": 7907,
+     "font": "Inter",
+     "size": "14px",
+     "lh": "20.3px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 163
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Stay in the loop.",
+     "w": 342,
+     "h": 29,
+     "x": 24,
+     "y": 8687,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Join the community and learn how other people get ",
+     "w": 342,
+     "h": 86,
+     "x": 24,
+     "y": 8715,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 342
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Take the short way.",
+     "w": 313,
+     "h": 29,
+     "x": 39,
+     "y": 13379,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Download and use Raycast for free.",
+     "w": 313,
+     "h": 29,
+     "x": 39,
+     "y": 13408,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "28.8px",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 313
+   }
+  ],
+  "h3": [
+   {
+    "h": {
+     "tag": "H3",
+     "text": "Plus thousands more...",
+     "w": 267,
+     "h": 29,
+     "x": 5557,
+     "y": 3220,
+     "font": "Inter",
+     "size": "24px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "SPAN",
+     "text": "Browse the store",
+     "w": 147,
+     "h": 18,
+     "x": 5617,
+     "y": 3257,
+     "font": "Inter",
+     "size": "16px",
+     "lh": "18.4px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgb(156, 156, 157)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(156, 156, 157)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    }
+   },
+   {
+    "h": {
+     "tag": "H3",
+     "text": "AI Chat",
+     "w": 320,
+     "h": 23,
+     "x": 35,
+     "y": 4090,
+     "font": "Inter",
+     "size": "15px",
+     "lh": "22.5px",
+     "weight": "500",
+     "ls": "normal",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "DIV",
+     "text": "Raycast’s built in AI Agent seamlessly integrates ",
+     "w": 320,
+     "h": 59,
+     "x": 35,
+     "y": 4116,
+     "font": "Inter",
+     "size": "13px",
+     "lh": "19.5px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgba(255, 255, 255, 0.4)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgba(255, 255, 255, 0.4)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    }
+   },
+   {
+    "h": {
+     "tag": "H3",
+     "text": "Quick AI",
+     "w": 320,
+     "h": 23,
+     "x": 35,
+     "y": 4471,
+     "font": "Inter",
+     "size": "15px",
+     "lh": "22.5px",
+     "weight": "500",
+     "ls": "normal",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "DIV",
+     "text": "Quick AI lives a single hotkey away, giving you ac",
+     "w": 320,
+     "h": 39,
+     "x": 35,
+     "y": 4497,
+     "font": "Inter",
+     "size": "13px",
+     "lh": "19.5px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgba(255, 255, 255, 0.4)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgba(255, 255, 255, 0.4)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    }
+   },
+   {
+    "h": {
+     "tag": "H3",
+     "text": "AI Extensions",
+     "w": 320,
+     "h": 23,
+     "x": 35,
+     "y": 4966,
+     "font": "Inter",
+     "size": "15px",
+     "lh": "22.5px",
+     "weight": "500",
+     "ls": "normal",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "DIV",
+     "text": "Connect all of your everyday tools with AI so it c",
+     "w": 320,
+     "h": 39,
+     "x": 35,
+     "y": 4993,
+     "font": "Inter",
+     "size": "13px",
+     "lh": "19.5px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgba(255, 255, 255, 0.4)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgba(255, 255, 255, 0.4)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    }
+   },
+   {
+    "h": {
+     "tag": "H3",
+     "text": "Build the perfect tools.",
+     "w": 282,
+     "h": 75,
+     "x": 54,
+     "y": 10363,
+     "font": "Inter",
+     "size": "32px",
+     "lh": "37.44px",
+     "weight": "400",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": null
+   }
+  ],
+  "census": [
+   [
+    "Inter 13px/23.4px w400 lsnormal",
+    87
+   ],
+   [
+    "Inter 14px/normal w500 ls0.2px",
+    73
+   ],
+   [
+    "\"Apple Color Emoji\" 41px/41px w400 lsnormal",
+    58
+   ],
+   [
+    "Inter 14px/normal w600 ls0.3px",
+    48
+   ],
+   [
+    "\"SF Pro Text\" 16px/18.4px w500 lsnormal",
+    28
+   ],
+   [
+    "Inter 14px/22.4px w500 ls0.2px",
+    21
+   ],
+   [
+    "\"SF Pro Text\" 23.75px/27.3125px w500 lsnormal",
+    18
+   ],
+   [
+    "Inter 14px/19.6px w600 lsnormal",
+    18
+   ],
+   [
+    "Inter 18px/20.7px w400 lsnormal",
+    17
+   ],
+   [
+    "Inter 14px/22.4px w500 lsnormal",
+    17
+   ],
+   [
+    "Inter 24px/38.4px w500 ls0.2px",
+    16
+   ],
+   [
+    "Inter 18px/28.8px w500 ls0.2px",
+    14
+   ],
+   [
+    "Inter 12px/16px w400 lsnormal",
+    14
+   ],
+   [
+    "Inter 11px/12px w400 lsnormal",
+    12
+   ],
+   [
+    "Inter 13px/14.95px w400 lsnormal",
+    8
+   ],
+   [
+    "Inter 13px/16px w400 lsnormal",
+    8
+   ],
+   [
+    "GeistMono 14px/22.4px w500 ls0.3px",
+    8
+   ],
+   [
+    "Inter 14px/20.3px w400 lsnormal",
+    8
+   ],
+   [
+    "Inter 18px/32px w350 lsnormal",
+    6
+   ],
+   [
+    "Inter 11px/28px w400 lsnormal",
+    6
+   ],
+   [
+    "Inter 14px/28px w400 lsnormal",
+    6
+   ],
+   [
+    "\"SF Pro Text\" 16px/18.4px w700 lsnormal",
+    4
+   ],
+   [
+    "GeistMono 10px/normal w300 ls0.5px",
+    4
+   ],
+   [
+    "Inter 13px/16px w500 lsnormal",
+    3
+   ],
+   [
+    "Inter 14px/normal w400 lsnormal",
+    3
+   ],
+   [
+    "Inter 15px/22.5px w500 lsnormal",
+    3
+   ],
+   [
+    "Inter 13px/19.5px w400 lsnormal",
+    3
+   ],
+   [
+    "Inter 18px/normal w400 ls0.2px",
+    3
+   ],
+   [
+    "Inter 11px/13px w400 lsnormal",
+    2
+   ],
+   [
+    "Inter 16px/25.6px w500 ls0.2px",
+    2
+   ]
+  ],
+  "colors": [
+   [
+    "rgb(255, 255, 255)",
+    292
+   ],
+   [
+    "rgb(156, 156, 157)",
+    89
+   ],
+   [
+    "rgba(255, 255, 255, 0.6)",
+    81
+   ],
+   [
+    "rgb(106, 107, 108)",
+    46
+   ],
+   [
+    "rgba(255, 255, 255, 0.4)",
+    17
+   ],
+   [
+    "rgb(67, 67, 69)",
+    11
+   ],
+   [
+    "rgba(255, 255, 255, 0.3)",
+    7
+   ],
+   [
+    "rgb(255, 99, 99)",
+    2
+   ],
+   [
+    "rgba(255, 255, 255, 0.7)",
+    2
+   ],
+   [
+    "rgb(0, 0, 0)",
+    1
+   ],
+   [
+    "rgba(255, 255, 255, 0.5)",
+    1
+   ],
+   [
+    "rgba(255, 255, 255, 0.8)",
+    1
+   ],
+   [
+    "rgb(140, 214, 255)",
+    1
+   ],
+   [
+    "rgb(47, 48, 49)",
+    1
+   ],
+   [
+    "rgba(255, 255, 255, 0.2)",
+    1
+   ],
+   [
+    "rgb(255, 207, 207)",
+    1
+   ]
+  ],
+  "bgs": [
+   [
+    "rgba(255, 255, 255, 0.05)",
+    104
+   ],
+   [
+    "rgb(255, 255, 255)",
+    103
+   ],
+   [
+    "rgb(67, 67, 69)",
+    18
+   ],
+   [
+    "rgba(255, 255, 255, 0.1)",
+    13
+   ],
+   [
+    "rgba(255, 255, 255, 0.02)",
+    7
+   ],
+   [
+    "rgba(255, 255, 255, 0.9)",
+    4
+   ],
+   [
+    "rgb(7, 8, 10)",
+    4
+   ],
+   [
+    "rgba(255, 255, 255, 0.2)",
+    4
+   ],
+   [
+    "rgb(8, 9, 12)",
+    4
+   ],
+   [
+    "rgb(255, 99, 99)",
+    3
+   ],
+   [
+    "rgba(158, 190, 215, 0.1)",
+    3
+   ],
+   [
+    "rgb(27, 28, 30)",
+    3
+   ],
+   [
+    "rgba(0, 0, 0, 0.44)",
+    1
+   ],
+   [
+    "rgb(89, 212, 153)",
+    1
+   ],
+   [
+    "rgb(86, 194, 255)",
+    1
+   ],
+   [
+    "rgb(255, 197, 49)",
+    1
+   ],
+   [
+    "rgb(17, 18, 20)",
+    1
+   ],
+   [
+    "color(srgb 0.122667 0.126353 0.144784)",
+    1
+   ],
+   [
+    "rgb(255, 98, 91)",
+    1
+   ],
+   [
+    "rgb(254, 188, 46)",
+    1
+   ]
+  ],
+  "radii": [
+   [
+    "11px",
+    158
+   ],
+   [
+    "12px",
+    72
+   ],
+   [
+    "10px",
+    47
+   ],
+   [
+    "20px",
+    39
+   ],
+   [
+    "99999px",
+    24
+   ],
+   [
+    "6px",
+    18
+   ],
+   [
+    "18px",
+    9
+   ],
+   [
+    "26px",
+    8
+   ],
+   [
+    "16px",
+    4
+   ],
+   [
+    "8px",
+    3
+   ],
+   [
+    "86px",
+    2
+   ],
+   [
+    "15px",
+    2
+   ],
+   [
+    "31px",
+    1
+   ],
+   [
+    "36px",
+    1
+   ],
+   [
+    "22px",
+    1
+   ],
+   [
+    "14px",
+    1
+   ]
+  ],
+  "trans": [
+   [
+    "opacity, box-shadow, transform, color, --key-bg-st | 0.4s, 0.2s, 0.2s, 0.2s, 0.4s, 0.4s | cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1)",
+    156
+   ],
+   [
+    "color | 0.3s | ease",
+    87
+   ],
+   [
+    "all | 0.3s | ease",
+    44
+   ],
+   [
+    "all | 0.2s | ease-in-out",
+    31
+   ],
+   [
+    "fill | 0.4s | cubic-bezier(0.23, 1, 0.32, 1)",
+    26
+   ],
+   [
+    "box-shadow | 0.2s | ease",
+    24
+   ],
+   [
+    "transform | 0.3s | ease",
+    21
+   ],
+   [
+    "filter | 0.3s | ease",
+    18
+   ],
+   [
+    "opacity | 0.2s | ease",
+    18
+   ],
+   [
+    "opacity | 0.2s | ease-out",
+    6
+   ],
+   [
+    "all | 0.2s | ease",
+    5
+   ],
+   [
+    "opacity | 0.4s | ease",
+    5
+   ],
+   [
+    "background-color | 0.15s | ease",
+    5
+   ],
+   [
+    "all | 2s | cubic-bezier(0.165, 0.84, 0.44, 1)",
+    4
+   ],
+   [
+    "transform, opacity | 0.5s, 0.25s | ease, ease",
+    3
+   ],
+   [
+    "transform | 1.5s | cubic-bezier(0.165, 0.84, 0.44, 1)",
+    3
+   ],
+   [
+    "transform | 0.25s | ease",
+    2
+   ],
+   [
+    "opacity, transform | 0.3s, 0.5s | ease-in-out, ease-in-out",
+    2
+   ],
+   [
+    "box-shadow | 0.2s | ease-in-out",
+    2
+   ],
+   [
+    "opacity, box-shadow, transform, color, --key-bg-st | 1.5s, 1.5s, 1.5s, 1.5s, 1.5s, 1.5s | cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1)",
+    2
+   ]
+  ],
+  "fonts": [
+   [
+    "Inter",
+    430
+   ],
+   [
+    "\"Apple Color Emoji\"",
+    59
+   ],
+   [
+    "\"SF Pro Text\"",
+    50
+   ],
+   [
+    "GeistMono",
+    14
+   ],
+   [
+    "jetBrainsMono",
+    1
+   ]
+  ],
+  "borders": [
+   [
+    "1px rgba(255, 255, 255, 0.1)",
+    27
+   ],
+   [
+    "1px rgba(0, 0, 0, 0)",
+    23
+   ],
+   [
+    "1px rgba(255, 255, 255, 0.06)",
+    14
+   ],
+   [
+    "2.42718px rgb(255, 99, 99)",
+    6
+   ],
+   [
+    "1px rgb(47, 48, 49)",
+    4
+   ],
+   [
+    "1.66667px rgba(142, 140, 144, 0.2)",
+    3
+   ],
+   [
+    "1px rgba(255, 255, 255, 0.08)",
+    2
+   ],
+   [
+    "1px rgb(27, 28, 30)",
+    2
+   ],
+   [
+    "1px rgba(255, 255, 255, 0.05)",
+    2
+   ],
+   [
+    "1px rgb(67, 67, 69)",
+    1
+   ],
+   [
+    "1px rgb(229, 55, 51)",
+    1
+   ],
+   [
+    "1px rgb(233, 183, 19)",
+    1
+   ]
+  ],
+  "anims": [
+   [
+    "_3Yq4tG_slideIn | 0.7s | cubic-bezier(0.215, 0.61, 0.355, 1) | 1",
+    17
+   ],
+   [
+    "GEOHJa_blink | 1s | steps(1) | infinite",
+    7
+   ],
+   [
+    "H3BVAa_fade-in-up | 1s | ease | 1",
+    2
+   ],
+   [
+    "qipMHW_visualEnter | 0.4s | cubic-bezier(0.4, 0, 0.22, 0.96) | 1",
+    1
+   ],
+   [
+    "_38IWKG_screenBlinkStartup | 1.5s | ease | 1",
+    1
+   ]
+  ],
+  "accentText": [
+   [
+    "rgb(255, 99, 99)",
+    2
+   ]
+  ],
+  "accentBg": [
+   [
+    "rgb(255, 99, 99)",
+    3
+   ],
+   [
+    "rgb(255, 98, 91)",
+    1
+   ],
+   [
+    "rgba(215, 42, 42, 0.02)",
+    1
+   ]
+  ],
+  "containers": [],
+  "canvas": {
+   "w": 780,
+   "h": 1118,
+   "cssW": 390,
+   "cssH": 559,
+   "is2d": false
+  },
+  "rootVars": {
+   "--rounding-none": "0px",
+   "--rounding-xs": "4px",
+   "--rounding-sm": "6px",
+   "--rounding-normal": "8px",
+   "--rounding-md": "12px",
+   "--rounding-lg": "16px",
+   "--rounding-xl": "20px",
+   "--rounding-xxl": "24px",
+   "--rounding-full": "100%",
+   "--spacing-none": "0px",
+   "--spacing-0-5": "4px",
+   "--spacing-1": "8px",
+   "--spacing-1-5": "12px",
+   "--spacing-2": "16px",
+   "--spacing-2-5": "20px",
+   "--spacing-3": "24px",
+   "--spacing-4": "32px",
+   "--spacing-5": "40px",
+   "--spacing-6": "48px",
+   "--spacing-7": "56px",
+   "--spacing-8": "64px",
+   "--spacing-9": "80px",
+   "--spacing-10": "96px",
+   "--spacing-11": "112px",
+   "--spacing-12": "168px",
+   "--spacing-13": "224px",
+   "--Base-White": "#fff",
+   "--grey-50": "#e6e6e6",
+   "--grey-100": "#cdcece",
+   "--grey-200": "#9c9c9d",
+   "--grey-300": "#6a6b6c",
+   "--grey-400": "#434345",
+   "--grey-500": "#2f3031",
+   "--grey-600": "#1b1c1e",
+   "--grey-700": "#111214",
+   "--grey-800": "#0c0d0f",
+   "--grey-900": "#07080a",
+   "--Base-Black": "#000",
+   "--main-font": "var(--font-inter), sans-serif",
+   "--monospace-font": "var(--font-jetbrains-mono), Menlo, Monaco, Courier, monospac",
+   "--container-xs-width": "746px",
+   "--container-sm-width": "1064px",
+   "--container-width": "1204px",
+   "--container-lg-width": "1280px",
+   "--grid-gap": "32px",
+   "--navbar-width": "var(--container-width)",
+   "--background": "var(--grey-900)",
+   "--reverse-background": "#fff",
+   "--font-color-rgb": "255, 255, 255",
+   "--reverse-font-color-rgb": "0, 0, 0",
+   "--lines-color-rgb": "255, 255, 255",
+   "--radius-md": "6px",
+   "--blue-dark": "#56c2ff",
+   "--red-dark": "#ff6363",
+   "--color-bg": "var(--grey-900)",
+   "--color-bg-100": "#101111",
+   "--color-bg-200": "#18191a",
+   "--color-bg-300": "#313133",
+   "--color-bg-400": "#494b4d",
+   "--color-fg": "#f4f4f6",
+   "--color-fg-200": "#c2c7ca",
+   "--color-fg-300": "#78787c",
+   "--color-fg-400": "#5e6366",
+   "--color-yellow": "#ffc533",
+   "--color-yellow-transparent": "#ffc53326",
+   "--color-red": "#ff6161",
+   "--color-red-transparent": "#ff616126",
+   "--color-blue": "#57c1ff",
+   "--color-blue-transparent": "#57c1ff26",
+   "--color-green": "#59d499",
+   "--color-green-transparent": "#59d49926",
+   "--color-border": "#242728",
+   "--color-button-bg": "#ffffffd0",
+   "--color-button-bg-hover": "#fff",
+   "--color-button-fg": "#18191a",
+   "--navbar-height": "58px",
+   "--navbar-container-padding-top": "var(--spacing-2)",
+   "--navbar-total-spacing": "calc(var(--navbar-height) + (2 * var(--navbar-container-padd",
+   "--removed-body-scroll-bar-size": "0px",
+   "--spring-1": "linear(0 0%, .005927 1%, .022466 2%, .047872 3%, .080554 4%,"
+  }
+ },
+ "1440": {
+  "header": {
+   "tag": "DIV",
+   "text": "StoreProAIiOSWindowsTeamsEnterpriseBlogPricingLog ",
+   "w": 1440,
+   "h": 92,
+   "x": 0,
+   "y": 0,
+   "font": "Inter",
+   "size": "16px",
+   "lh": "18.4px",
+   "weight": "400",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "border": "0px rgb(255, 255, 255)",
+   "pad": "16px 16px 0px",
+   "shadow": "none",
+   "transition": "all",
+   "position": "fixed",
+   "backdropFilter": "none",
+   "top": "0px"
+  },
+  "navCard": {
+   "tag": "DIV",
+   "text": "StoreProAIiOSWindowsTeamsEnterpriseBlogPricingLog ",
+   "w": 1204,
+   "h": 76,
+   "x": 118,
+   "y": 16,
+   "font": "Inter",
+   "size": "16px",
+   "lh": "18.4px",
+   "weight": "400",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "16px",
+   "border": "1px rgba(255, 255, 255, 0.06)",
+   "pad": "16px 32px",
+   "shadow": "rgba(255, 255, 255, 0.15) 0px 1px 1px 0px inset",
+   "transition": "height 0.3s, transform 0.3s",
+   "backdropFilter": "blur(5px)",
+   "backgroundImage": "linear-gradient(137deg, rgba(17, 18, 20, 0.75) 4.87%, rgba(12, 13, 15, 0.9) 75.88%)"
+  },
+  "navLinks": [
+   {
+    "tag": "A",
+    "text": "",
+    "w": 0,
+    "h": 0,
+    "x": 0,
+    "y": 0,
+    "font": "Inter",
+    "size": "16px",
+    "lh": "18.4px",
+    "weight": "400",
+    "ls": "normal",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "border": "0px rgb(255, 255, 255)",
+    "pad": "0px",
+    "shadow": "none",
+    "transition": "all"
+   },
+   {
+    "tag": "A",
+    "text": "Store",
+    "w": 53,
+    "h": 41,
+    "x": 406,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Pro",
+    "w": 39,
+    "h": 41,
+    "x": 474,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "AI",
+    "w": 30,
+    "h": 41,
+    "x": 530,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "iOS",
+    "w": 40,
+    "h": 41,
+    "x": 576,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Windows",
+    "w": 79,
+    "h": 41,
+    "x": 632,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Teams",
+    "w": 61,
+    "h": 41,
+    "x": 727,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Enterprise",
+    "w": 87,
+    "h": 41,
+    "x": 804,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Blog",
+    "w": 47,
+    "h": 41,
+    "x": 907,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Pricing",
+    "w": 64,
+    "h": 41,
+    "x": 970,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Log in",
+    "w": 58,
+    "h": 41,
+    "x": 1090,
+    "y": 34,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "normal",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "6px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "12px 8px",
+    "shadow": "none",
+    "transition": "0.2s ease-in-out"
+   },
+   {
+    "tag": "A",
+    "text": "Download",
+    "w": 117,
+    "h": 36,
+    "x": 1172,
+    "y": 36,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "16px",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(47, 48, 49)",
+    "bg": "rgb(230, 230, 230)",
+    "radius": "8px",
+    "border": "0px rgb(47, 48, 49)",
+    "pad": "8px 12px",
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+    "transition": "background-image 0.2s, background-color 0.2s, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out"
+   }
+  ],
+  "h1": {
+   "tag": "H1",
+   "text": "Your shortcut to everything.",
+   "w": 540,
+   "h": 141,
+   "x": 450,
+   "y": 370,
+   "font": "Inter",
+   "size": "64px",
+   "lh": "70.4px",
+   "weight": "600",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "border": "0px rgb(255, 255, 255)",
+   "pad": "0px",
+   "shadow": "none",
+   "transition": "all",
+   "maxWidth": "540px",
+   "textWrap": "wrap"
+  },
+  "heroP": {
+   "tag": "P",
+   "text": "A collection of powerful productivity tools all wi",
+   "w": 786,
+   "h": 42,
+   "x": 327,
+   "y": 543,
+   "font": "Inter",
+   "size": "18px",
+   "lh": "normal",
+   "weight": "400",
+   "ls": "0.2px",
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "border": "0px rgb(255, 255, 255)",
+   "pad": "0px",
+   "shadow": "none",
+   "transition": "all"
+  },
+  "buttons": [
+   {
+    "tag": "A",
+    "text": "Download",
+    "w": 117,
+    "h": 36,
+    "x": 1172,
+    "y": 36,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "16px",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(47, 48, 49)",
+    "bg": "rgb(230, 230, 230)",
+    "radius": "8px",
+    "border": "0px rgb(47, 48, 49)",
+    "pad": "8px 12px",
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+    "transition": "background-image 0.2s, background-color 0.2s, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out",
+    "backgroundImage": "none",
+    "gap": "8px"
+   },
+   {
+    "tag": "A",
+    "text": "Download for Mac",
+    "w": 173,
+    "h": 36,
+    "x": 633,
+    "y": 797,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "16px",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(47, 48, 49)",
+    "bg": "rgb(230, 230, 230)",
+    "radius": "8px",
+    "border": "0px rgb(47, 48, 49)",
+    "pad": "8px 12px",
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+    "transition": "background-image 0.2s, background-color 0.2s, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out",
+    "backgroundImage": "none",
+    "gap": "8px"
+   },
+   {
+    "tag": "BUTTON",
+    "text": "Download V1",
+    "w": 81,
+    "h": 19,
+    "x": 766,
+    "y": 876,
+    "font": "GeistMono",
+    "size": "12px",
+    "lh": "19.2px",
+    "weight": "400",
+    "ls": "0.2px",
+    "color": "rgb(156, 156, 157)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "4px",
+    "border": "0px rgb(156, 156, 157)",
+    "pad": "0px",
+    "shadow": "none",
+    "transition": "color 0.2s",
+    "backgroundImage": "none",
+    "gap": "normal"
+   },
+   {
+    "tag": "A",
+    "text": "Download",
+    "w": 117,
+    "h": 36,
+    "x": 142,
+    "y": 2896,
+    "font": "Inter",
+    "size": "14px",
+    "lh": "16px",
+    "weight": "500",
+    "ls": "0.2px",
+    "color": "rgb(47, 48, 49)",
+    "bg": "rgb(230, 230, 230)",
+    "radius": "8px",
+    "border": "0px rgb(47, 48, 49)",
+    "pad": "8px 12px",
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+    "transition": "background-image 0.2s, background-color 0.2s, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out",
+    "backgroundImage": "none",
+    "gap": "8px"
+   }
+  ],
+  "h2": [
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Take shortcuts, not detours.",
+     "w": 350,
+     "h": 24,
+     "x": 545,
+     "y": 1343,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "One interface, everything you need.",
+     "w": 350,
+     "h": 24,
+     "x": 545,
+     "y": 1367,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 350
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "It’s not about saving time.",
+     "w": 272,
+     "h": 24,
+     "x": 142,
+     "y": 2776,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "It’s about feeling like you’re never wasting it.",
+     "w": 272,
+     "h": 48,
+     "x": 142,
+     "y": 2800,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 272
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "There’s an extension for that.",
+     "w": 432,
+     "h": 24,
+     "x": 118,
+     "y": 3438,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Use your favorite tools without even opening them.",
+     "w": 432,
+     "h": 48,
+     "x": 118,
+     "y": 3462,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 432
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Meet your new virtual assistant",
+     "w": 453,
+     "h": 38,
+     "x": 494,
+     "y": 4745,
+     "font": "Inter",
+     "size": "32px",
+     "lh": "38.4px",
+     "weight": "500",
+     "ls": "-0.8px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Raycast AI uses the tools you already rely on to g",
+     "w": 500,
+     "h": 54,
+     "x": 470,
+     "y": 4798,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "27px",
+     "weight": "400",
+     "ls": "0.18px",
+     "color": "rgba(255, 255, 255, 0.5)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgba(255, 255, 255, 0.5)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 1020
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Built for professionals like you.",
+     "w": 400,
+     "h": 24,
+     "x": 520,
+     "y": 6464,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Used by seriously productive people.",
+     "w": 400,
+     "h": 24,
+     "x": 520,
+     "y": 6488,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 400
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Don't repeat yourself.",
+     "w": 387,
+     "h": 24,
+     "x": 527,
+     "y": 7564,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Automate the things you do all the time.",
+     "w": 387,
+     "h": 24,
+     "x": 527,
+     "y": 7588,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 387
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Task list",
+     "w": 278,
+     "h": 18,
+     "x": 881,
+     "y": 8938,
+     "font": "Inter",
+     "size": "18px",
+     "lh": "22.5px",
+     "weight": "600",
+     "ls": "-0.12px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "UL",
+     "text": "Collect and go through beta feedbackAdd settings e",
+     "w": 278,
+     "h": 129,
+     "x": 881,
+     "y": 8962,
+     "font": "Inter",
+     "size": "14px",
+     "lh": "20.3px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 317
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Stay in the loop.",
+     "w": 486,
+     "h": 24,
+     "x": 477,
+     "y": 9471,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Join the community and learn how other people get ",
+     "w": 486,
+     "h": 48,
+     "x": 477,
+     "y": 9495,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 486
+   },
+   {
+    "h": {
+     "tag": "H2",
+     "text": "Take the short way.",
+     "w": 347,
+     "h": 24,
+     "x": 547,
+     "y": 14242,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "P",
+     "text": "Download and use Raycast for free.",
+     "w": 347,
+     "h": 24,
+     "x": 547,
+     "y": 14266,
+     "font": "Inter",
+     "size": "20px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(106, 107, 108)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(106, 107, 108)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "parentW": 347
+   }
+  ],
+  "h3": [
+   {
+    "h": {
+     "tag": "H3",
+     "text": "Plus thousands more...",
+     "w": 267,
+     "h": 29,
+     "x": 7237,
+     "y": 4035,
+     "font": "Inter",
+     "size": "24px",
+     "lh": "normal",
+     "weight": "500",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "SPAN",
+     "text": "Browse the store",
+     "w": 147,
+     "h": 18,
+     "x": 7297,
+     "y": 4072,
+     "font": "Inter",
+     "size": "16px",
+     "lh": "18.4px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgb(156, 156, 157)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(156, 156, 157)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    }
+   },
+   {
+    "h": {
+     "tag": "H3",
+     "text": "AI Chat",
+     "w": 450,
+     "h": 24,
+     "x": 234,
+     "y": 5348,
+     "font": "Inter",
+     "size": "16px",
+     "lh": "24px",
+     "weight": "500",
+     "ls": "normal",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "DIV",
+     "text": "Raycast’s built in AI Agent seamlessly integrates ",
+     "w": 450,
+     "h": 45,
+     "x": 234,
+     "y": 5376,
+     "font": "Inter",
+     "size": "15px",
+     "lh": "22.5px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgba(255, 255, 255, 0.4)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgba(255, 255, 255, 0.4)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    }
+   },
+   {
+    "h": {
+     "tag": "H3",
+     "text": "Quick AI",
+     "w": 447,
+     "h": 24,
+     "x": 234,
+     "y": 5891,
+     "font": "Inter",
+     "size": "16px",
+     "lh": "24px",
+     "weight": "500",
+     "ls": "normal",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "DIV",
+     "text": "Quick AI lives a single hotkey away, giving you ac",
+     "w": 447,
+     "h": 45,
+     "x": 234,
+     "y": 5919,
+     "font": "Inter",
+     "size": "15px",
+     "lh": "22.5px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgba(255, 255, 255, 0.4)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgba(255, 255, 255, 0.4)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    }
+   },
+   {
+    "h": {
+     "tag": "H3",
+     "text": "AI Extensions",
+     "w": 447,
+     "h": 24,
+     "x": 759,
+     "y": 5891,
+     "font": "Inter",
+     "size": "16px",
+     "lh": "24px",
+     "weight": "500",
+     "ls": "normal",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": {
+     "tag": "DIV",
+     "text": "Connect all of your everyday tools with AI so it c",
+     "w": 447,
+     "h": 45,
+     "x": 759,
+     "y": 5919,
+     "font": "Inter",
+     "size": "15px",
+     "lh": "22.5px",
+     "weight": "400",
+     "ls": "normal",
+     "color": "rgba(255, 255, 255, 0.4)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgba(255, 255, 255, 0.4)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    }
+   },
+   {
+    "h": {
+     "tag": "H3",
+     "text": "Build the perfect tools.",
+     "w": 307,
+     "h": 197,
+     "x": 211,
+     "y": 10710,
+     "font": "Inter",
+     "size": "56px",
+     "lh": "65.52px",
+     "weight": "400",
+     "ls": "0.2px",
+     "color": "rgb(255, 255, 255)",
+     "bg": "rgba(0, 0, 0, 0)",
+     "radius": "0px",
+     "border": "0px rgb(255, 255, 255)",
+     "pad": "0px",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "next": null
+   }
+  ],
+  "census": [
+   [
+    "Inter 13px/23.4px w400 lsnormal",
+    87
+   ],
+   [
+    "Inter 14px/normal w500 ls0.2px",
+    73
+   ],
+   [
+    "Inter 16px/normal w600 ls0.3px",
+    72
+   ],
+   [
+    "\"Apple Color Emoji\" 41px/41px w400 lsnormal",
+    58
+   ],
+   [
+    "\"SF Pro Text\" 16px/18.4px w500 lsnormal",
+    28
+   ],
+   [
+    "Inter 14px/22.4px w500 ls0.2px",
+    23
+   ],
+   [
+    "\"SF Pro Text\" 23.75px/27.3125px w500 lsnormal",
+    18
+   ],
+   [
+    "Inter 14px/19.6px w600 lsnormal",
+    18
+   ],
+   [
+    "Inter 18px/20.7px w400 lsnormal",
+    17
+   ],
+   [
+    "Inter 16px/25.6px w500 lsnormal",
+    17
+   ],
+   [
+    "Inter 24px/38.4px w500 ls0.2px",
+    17
+   ],
+   [
+    "Inter 20px/normal w500 ls0.2px",
+    16
+   ],
+   [
+    "Inter 12px/16px w400 lsnormal",
+    14
+   ],
+   [
+    "Inter 11px/12px w400 lsnormal",
+    12
+   ],
+   [
+    "GeistMono 14px/22.4px w500 ls0.3px",
+    9
+   ],
+   [
+    "Inter 13px/14.95px w400 lsnormal",
+    8
+   ],
+   [
+    "Inter 13px/16px w400 lsnormal",
+    8
+   ],
+   [
+    "Inter 14px/20.3px w400 lsnormal",
+    8
+   ],
+   [
+    "GeistMono 12px/19.2px w400 ls0.2px",
+    6
+   ],
+   [
+    "Inter 18px/32px w350 lsnormal",
+    6
+   ],
+   [
+    "Inter 11px/28px w400 lsnormal",
+    6
+   ],
+   [
+    "Inter 18px/32px w400 lsnormal",
+    6
+   ],
+   [
+    "GeistMono 10px/normal w300 ls0.5px",
+    6
+   ],
+   [
+    "Inter 14px/16px w500 ls0.2px",
+    4
+   ],
+   [
+    "Inter 18px/normal w400 ls0.2px",
+    4
+   ],
+   [
+    "Inter 16px/25.6px w500 ls0.2px",
+    4
+   ],
+   [
+    "\"SF Pro Text\" 16px/18.4px w700 lsnormal",
+    4
+   ],
+   [
+    "Inter 13px/16px w500 lsnormal",
+    3
+   ],
+   [
+    "Inter 14px/normal w400 lsnormal",
+    3
+   ],
+   [
+    "Inter 16px/24px w500 lsnormal",
+    3
+   ]
+  ],
+  "colors": [
+   [
+    "rgb(255, 255, 255)",
+    296
+   ],
+   [
+    "rgb(156, 156, 157)",
+    97
+   ],
+   [
+    "rgba(255, 255, 255, 0.6)",
+    81
+   ],
+   [
+    "rgb(106, 107, 108)",
+    49
+   ],
+   [
+    "rgb(67, 67, 69)",
+    35
+   ],
+   [
+    "rgba(255, 255, 255, 0.4)",
+    17
+   ],
+   [
+    "rgba(255, 255, 255, 0.3)",
+    7
+   ],
+   [
+    "rgb(47, 48, 49)",
+    5
+   ],
+   [
+    "rgb(255, 99, 99)",
+    2
+   ],
+   [
+    "rgba(255, 255, 255, 0.7)",
+    2
+   ],
+   [
+    "rgb(0, 0, 0)",
+    1
+   ],
+   [
+    "rgba(255, 255, 255, 0.5)",
+    1
+   ],
+   [
+    "rgba(255, 255, 255, 0.8)",
+    1
+   ],
+   [
+    "rgb(140, 214, 255)",
+    1
+   ],
+   [
+    "rgba(255, 255, 255, 0.2)",
+    1
+   ]
+  ],
+  "bgs": [
+   [
+    "rgba(255, 255, 255, 0.05)",
+    104
+   ],
+   [
+    "rgb(255, 255, 255)",
+    103
+   ],
+   [
+    "rgb(67, 67, 69)",
+    18
+   ],
+   [
+    "rgba(255, 255, 255, 0.1)",
+    13
+   ],
+   [
+    "rgba(255, 255, 255, 0.02)",
+    7
+   ],
+   [
+    "rgb(8, 9, 12)",
+    6
+   ],
+   [
+    "rgb(230, 230, 230)",
+    5
+   ],
+   [
+    "rgba(255, 255, 255, 0.2)",
+    4
+   ],
+   [
+    "rgb(7, 8, 10)",
+    3
+   ],
+   [
+    "rgb(255, 99, 99)",
+    3
+   ],
+   [
+    "rgba(158, 190, 215, 0.1)",
+    3
+   ],
+   [
+    "rgb(27, 28, 30)",
+    3
+   ],
+   [
+    "rgba(0, 0, 0, 0.44)",
+    1
+   ],
+   [
+    "rgb(89, 212, 153)",
+    1
+   ],
+   [
+    "rgb(86, 194, 255)",
+    1
+   ],
+   [
+    "rgb(255, 197, 49)",
+    1
+   ],
+   [
+    "rgb(17, 18, 20)",
+    1
+   ],
+   [
+    "color(srgb 0.122667 0.126353 0.144784)",
+    1
+   ],
+   [
+    "rgb(255, 98, 91)",
+    1
+   ],
+   [
+    "rgb(254, 188, 46)",
+    1
+   ]
+  ],
+  "radii": [
+   [
+    "11px",
+    159
+   ],
+   [
+    "12px",
+    133
+   ],
+   [
+    "10px",
+    47
+   ],
+   [
+    "20px",
+    38
+   ],
+   [
+    "16px",
+    28
+   ],
+   [
+    "99999px",
+    24
+   ],
+   [
+    "6px",
+    15
+   ],
+   [
+    "18px",
+    11
+   ],
+   [
+    "26px",
+    8
+   ],
+   [
+    "8px",
+    7
+   ],
+   [
+    "4px",
+    5
+   ],
+   [
+    "30px",
+    3
+   ],
+   [
+    "86px",
+    2
+   ],
+   [
+    "4.76px",
+    2
+   ],
+   [
+    "999px",
+    2
+   ],
+   [
+    "19px",
+    1
+   ]
+  ],
+  "trans": [
+   [
+    "opacity, box-shadow, transform, color, --key-bg-st | 0.4s, 0.2s, 0.2s, 0.2s, 0.4s, 0.4s | cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1), cubic-bezier(0.23, 1, 0.32, 1)",
+    159
+   ],
+   [
+    "color | 0.3s | ease",
+    87
+   ],
+   [
+    "all | 0.3s | ease",
+    45
+   ],
+   [
+    "all | 0.3s | ease-in-out",
+    39
+   ],
+   [
+    "all | 0.2s | ease-in-out",
+    31
+   ],
+   [
+    "fill | 0.4s | cubic-bezier(0.23, 1, 0.32, 1)",
+    26
+   ],
+   [
+    "box-shadow | 0.2s | ease",
+    24
+   ],
+   [
+    "transform | 0.3s | ease",
+    21
+   ],
+   [
+    "filter | 0.3s | ease",
+    18
+   ],
+   [
+    "opacity | 0.2s | ease",
+    18
+   ],
+   [
+    "opacity, transform | 0.3s, 0.3s | ease-out, ease-out",
+    8
+   ],
+   [
+    "opacity | 0.2s | ease-out",
+    6
+   ],
+   [
+    "background-color | 0.15s | ease",
+    6
+   ],
+   [
+    "background-image, background-color, box-shadow, tr | 0.2s, 0.2s, 0.2s, 0.1s | ease, ease, ease-in-out, ease-in-out",
+    5
+   ],
+   [
+    "all | 0.2s | ease",
+    5
+   ],
+   [
+    "opacity | 0.4s | ease",
+    5
+   ],
+   [
+    "opacity | 0.3s | ease-out",
+    4
+   ],
+   [
+    "color | 0.2s | ease",
+    4
+   ],
+   [
+    "transform | 1.5s | cubic-bezier(0.165, 0.84, 0.44, 1)",
+    4
+   ],
+   [
+    "all | 2s | cubic-bezier(0.165, 0.84, 0.44, 1)",
+    4
+   ]
+  ],
+  "fonts": [
+   [
+    "Inter",
+    463
+   ],
+   [
+    "\"Apple Color Emoji\"",
+    59
+   ],
+   [
+    "\"SF Pro Text\"",
+    50
+   ],
+   [
+    "GeistMono",
+    23
+   ],
+   [
+    "jetBrainsMono",
+    1
+   ]
+  ],
+  "borders": [
+   [
+    "1px rgba(255, 255, 255, 0.1)",
+    26
+   ],
+   [
+    "1px rgba(0, 0, 0, 0)",
+    23
+   ],
+   [
+    "1px rgba(255, 255, 255, 0.06)",
+    14
+   ],
+   [
+    "1.25px rgb(255, 99, 99)",
+    6
+   ],
+   [
+    "1px rgb(47, 48, 49)",
+    4
+   ],
+   [
+    "1px rgba(142, 140, 144, 0.2)",
+    3
+   ],
+   [
+    "1px rgba(255, 255, 255, 0.08)",
+    2
+   ],
+   [
+    "1px rgb(27, 28, 30)",
+    2
+   ],
+   [
+    "1px rgba(255, 255, 255, 0.05)",
+    2
+   ],
+   [
+    "1px rgb(67, 67, 69)",
+    1
+   ],
+   [
+    "1px rgb(229, 55, 51)",
+    1
+   ],
+   [
+    "1px rgb(233, 183, 19)",
+    1
+   ]
+  ],
+  "anims": [
+   [
+    "_3Yq4tG_slideIn | 0.7s | cubic-bezier(0.215, 0.61, 0.355, 1) | 1",
+    17
+   ],
+   [
+    "GEOHJa_blink | 1s | steps(1) | infinite",
+    7
+   ],
+   [
+    "H3BVAa_fade-in-up | 1s | ease | 1",
+    2
+   ],
+   [
+    "qipMHW_visualEnter | 0.4s | cubic-bezier(0.4, 0, 0.22, 0.96) | 1",
+    1
+   ],
+   [
+    "_38IWKG_screenBlinkStartup | 1.5s | ease | 1",
+    1
+   ]
+  ],
+  "accentText": [
+   [
+    "rgb(255, 99, 99)",
+    2
+   ]
+  ],
+  "accentBg": [
+   [
+    "rgb(255, 99, 99)",
+    3
+   ],
+   [
+    "rgb(255, 98, 91)",
+    1
+   ],
+   [
+    "rgba(215, 42, 42, 0.02)",
+    1
+   ]
+  ],
+  "containers": [
+   [
+    "1204",
+    13
+   ],
+   [
+    "1184",
+    7
+   ],
+   [
+    "750",
+    6
+   ],
+   [
+    "1392",
+    6
+   ],
+   [
+    "1014",
+    4
+   ],
+   [
+    "1020",
+    4
+   ],
+   [
+    "1200",
+    4
+   ],
+   [
+    "1064",
+    3
+   ]
+  ],
+  "canvas": {
+   "w": 2400,
+   "h": 1790,
+   "cssW": 1200,
+   "cssH": 895,
+   "is2d": false
+  },
+  "rootVars": {
+   "--rounding-none": "0px",
+   "--rounding-xs": "4px",
+   "--rounding-sm": "6px",
+   "--rounding-normal": "8px",
+   "--rounding-md": "12px",
+   "--rounding-lg": "16px",
+   "--rounding-xl": "20px",
+   "--rounding-xxl": "24px",
+   "--rounding-full": "100%",
+   "--spacing-none": "0px",
+   "--spacing-0-5": "4px",
+   "--spacing-1": "8px",
+   "--spacing-1-5": "12px",
+   "--spacing-2": "16px",
+   "--spacing-2-5": "20px",
+   "--spacing-3": "24px",
+   "--spacing-4": "32px",
+   "--spacing-5": "40px",
+   "--spacing-6": "48px",
+   "--spacing-7": "56px",
+   "--spacing-8": "64px",
+   "--spacing-9": "80px",
+   "--spacing-10": "96px",
+   "--spacing-11": "112px",
+   "--spacing-12": "168px",
+   "--spacing-13": "224px",
+   "--Base-White": "#fff",
+   "--grey-50": "#e6e6e6",
+   "--grey-100": "#cdcece",
+   "--grey-200": "#9c9c9d",
+   "--grey-300": "#6a6b6c",
+   "--grey-400": "#434345",
+   "--grey-500": "#2f3031",
+   "--grey-600": "#1b1c1e",
+   "--grey-700": "#111214",
+   "--grey-800": "#0c0d0f",
+   "--grey-900": "#07080a",
+   "--Base-Black": "#000",
+   "--main-font": "var(--font-inter), sans-serif",
+   "--monospace-font": "var(--font-jetbrains-mono), Menlo, Monaco, Courier, monospac",
+   "--container-xs-width": "746px",
+   "--container-sm-width": "1064px",
+   "--container-width": "1204px",
+   "--container-lg-width": "1280px",
+   "--grid-gap": "32px",
+   "--navbar-width": "var(--container-width)",
+   "--background": "var(--grey-900)",
+   "--reverse-background": "#fff",
+   "--font-color-rgb": "255, 255, 255",
+   "--reverse-font-color-rgb": "0, 0, 0",
+   "--lines-color-rgb": "255, 255, 255",
+   "--radius-md": "6px",
+   "--blue-dark": "#56c2ff",
+   "--red-dark": "#ff6363",
+   "--color-bg": "var(--grey-900)",
+   "--color-bg-100": "#101111",
+   "--color-bg-200": "#18191a",
+   "--color-bg-300": "#313133",
+   "--color-bg-400": "#494b4d",
+   "--color-fg": "#f4f4f6",
+   "--color-fg-200": "#c2c7ca",
+   "--color-fg-300": "#78787c",
+   "--color-fg-400": "#5e6366",
+   "--color-yellow": "#ffc533",
+   "--color-yellow-transparent": "#ffc53326",
+   "--color-red": "#ff6161",
+   "--color-red-transparent": "#ff616126",
+   "--color-blue": "#57c1ff",
+   "--color-blue-transparent": "#57c1ff26",
+   "--color-green": "#59d499",
+   "--color-green-transparent": "#59d49926",
+   "--color-border": "#242728",
+   "--color-button-bg": "#ffffffd0",
+   "--color-button-bg-hover": "#fff",
+   "--color-button-fg": "#18191a",
+   "--navbar-height": "58px",
+   "--navbar-container-padding-top": "var(--spacing-2)",
+   "--navbar-total-spacing": "calc(var(--navbar-height) + (2 * var(--navbar-container-padd",
+   "--removed-body-scroll-bar-size": "0px",
+   "--spring-1": "linear(0 0%, .005927 1%, .022466 2%, .047872 3%, .080554 4%,"
+  }
+ },
+ "menu390": [
+  " 16px w400 h0 rgb(255, 255, 255)",
+  "Store 14px w500 h41 rgb(156, 156, 157)",
+  "Pro 14px w500 h41 rgb(156, 156, 157)",
+  "AI 14px w500 h41 rgb(156, 156, 157)",
+  "iOS 14px w500 h41 rgb(156, 156, 157)",
+  "Windows 14px w500 h41 rgb(156, 156, 157)",
+  "Teams 14px w500 h41 rgb(156, 156, 157)",
+  "Enterprise 14px w500 h41 rgb(156, 156, 157)",
+  "Blog 14px w500 h41 rgb(156, 156, 157)",
+  "Pricing 14px w500 h41 rgb(156, 156, 157)",
+  "Log in 14px w500 h41 rgb(156, 156, 157)",
+  "Download 14px w500 h0 rgb(47, 48, 49)",
+  "Log in 14px w500 h0 rgb(47, 48, 49)"
+ ],
+ "interaction": {
+  "navRest": {
+   "text": "Pro",
+   "color": "rgb(156, 156, 157)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "shadow": "none",
+   "transform": "none",
+   "opacity": "1"
+  },
+  "navHover": {
+   "text": "Pro",
+   "color": "rgb(156, 156, 157)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "shadow": "none",
+   "transform": "none",
+   "opacity": "1"
+  },
+  "btnRest": {
+   "text": "Download for Mac",
+   "color": "rgb(47, 48, 49)",
+   "bg": "rgb(230, 230, 230)",
+   "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset",
+   "transform": "none",
+   "opacity": "1"
+  },
+  "btnHover": {
+   "text": "Download for Mac",
+   "color": "rgb(47, 48, 49)",
+   "bg": "rgb(230, 230, 230)",
+   "shadow": "rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset, rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px",
+   "transform": "none",
+   "opacity": "1"
+  },
+  "btnActive": {
+   "text": "Download for Mac",
+   "color": "rgb(47, 48, 49)",
+   "bg": "rgb(255, 255, 255)",
+   "shadow": "rgba(0, 0, 0, 0.2) 0px -1px 0.4px 0px inset, rgb(255, 255, 255) 0px 1px 0.4px 0px inset, rgba(0, 0, 0, 0.5) 0px 0px 0px 2px, rgba(255, 255, 255, 0.19) 0px 0px 14px 0px",
+   "transform": "none",
+   "opacity": "1"
+  },
+  "menu390": [
+   "Store | 14px w500 h41 y105 rgb(156, 156, 157)",
+   "Pro | 14px w500 h41 y150 rgb(156, 156, 157)",
+   "AI | 14px w500 h41 y195 rgb(156, 156, 157)",
+   "iOS | 14px w500 h41 y240 rgb(156, 156, 157)",
+   "Windows | 14px w500 h41 y285 rgb(156, 156, 157)",
+   "Teams | 14px w500 h41 y330 rgb(156, 156, 157)",
+   "Enterprise | 14px w500 h41 y375 rgb(156, 156, 157)",
+   "Blog | 14px w500 h41 y420 rgb(156, 156, 157)",
+   "Pricing | 14px w500 h41 y465 rgb(156, 156, 157)",
+   "Log in | 14px w500 h41 y571 rgb(156, 156, 157)"
+  ]
+ }
+}

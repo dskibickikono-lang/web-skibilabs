@@ -1,0 +1,88 @@
+---
+import Band from '../components/Band.astro';
+import Icon from '../components/Icon.astro';
+import PageHero from '../components/PageHero.astro';
+import Base from '../layouts/Base.astro';
+import '../styles/console.css';
+import '../styles/page.css';
+
+const tiles = [
+  { icon: 'play', title: 'Uruchamianie', text: 'Agent startuje razem z serwerem i wraca do pracy po restarcie. Wersje są oznaczone, więc wiadomo, co działa.' },
+  { icon: 'queue', title: 'Kolejki', text: 'Zadania czekają w kolejce, a nie w pamięci procesu. Gdy coś się zatrzyma, nic nie ginie.' },
+  { icon: 'memory', title: 'Pamięć', text: 'Agent pamięta to, co ma pamiętać, w bazie na Twoim serwerze. Wpisy da się przejrzeć i usunąć.' },
+  { icon: 'tool', title: 'Narzędzia', text: 'Każde narzędzie ma opisane wejście, wyjście i zakres. Agent nie dostaje „dostępu do wszystkiego”.' },
+  { icon: 'lock', title: 'Sekrety i uprawnienia', text: 'Klucze leżą w sejfie serwera, poza kodem i logami. Uprawnienia są listą, którą można przeczytać.' },
+  { icon: 'pulse', title: 'Monitoring', text: 'Stan usług, dziennik wywołań i powiadomienie, gdy któraś usługa przestaje odpowiadać.' },
+] as const;
+
+const checks = [
+  ['Agent wstaje po restarcie serwera', 'Bez ręcznego uruchamiania i bez utraty zadań z kolejki.'],
+  ['Każde zadanie ma ślad', 'Widać, kiedy przyszło, co agent zrobił i czym się skończyło.'],
+  ['Zablokowane narzędzie zostaje zablokowane', 'Próba użycia kończy się odmową i wpisem w dzienniku.'],
+  ['Sekretów nie ma w kodzie ani w logach', 'Możesz to sprawdzić samodzielnie, przeszukując repozytorium i dziennik.'],
+  ['Awaria usługi zgłasza się sama', 'Monitoring wysyła powiadomienie, gdy usługa przestaje odpowiadać.'],
+  ['Zmianę da się cofnąć', 'Każda wersja agenta jest oznaczona, a powrót do poprzedniej jest opisany w runbooku.'],
+] as const;
+---
+
+<Base
+  title="Infrastruktura dla agentów AI"
+  description="Środowisko, w którym agent AI działa stabilnie na serwerze klienta: uruchamianie, kolejki, pamięć, narzędzia, sekrety, uprawnienia i monitoring."
+>
+  <PageHero
+    eyebrow="Infrastruktura dla agentów AI"
+    title="Środowisko, w którym agent działa stabilnie"
+    lead="Stawiamy na Twoim serwerze wszystko, czego agent potrzebuje poza samym modelem: uruchamianie, kolejki, pamięć, narzędzia, sekrety, uprawnienia i monitoring."
+  >
+    <div class="figure card" data-reveal>
+      <p class="figure-bar mono" data-no-typo><span>schemat środowiska</span><span class="cs-tag mono">przykład</span></p>
+      <div class="arch">
+        <div class="arch-node"><b><Icon name="mail" />Wyzwalacz</b>wiadomość, harmonogram albo zdarzenie z innego systemu</div>
+        <div class="arch-node"><b><Icon name="queue" />Kolejka</b>zadania czekają na swoją kolej i nie giną przy awarii</div>
+        <div class="arch-node core"><b><Icon name="server" />Agent</b>model, pamięć i limit kroków na jedno zadanie</div>
+        <div class="arch-node"><b><Icon name="tool" />Narzędzia</b>każde z opisanym zakresem: odczyt, zapis albo blokada</div>
+        <p class="arch-rail"><Icon name="lock" /><span><b>Sekrety</b> — w sejfie serwera, poza kodem i logami</span></p>
+        <p class="arch-rail"><Icon name="pulse" /><span><b>Monitoring</b> — stan usług, dziennik wywołań, powiadomienia</span></p>
+      </div>
+    </div>
+  </PageHero>
+
+  <section class="section" aria-labelledby="co-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="co-h">Co dostajesz.<span>Sześć elementów, bez których agent jest tylko pokazem.</span></h2>
+      </div>
+      <ul class="tiles">
+        {
+          tiles.map((t) => (
+            <li class="tile card" data-reveal>
+              <span class="tile-icon"><Icon name={t.icon} size={18} /></span>
+              <h3 class="h3">{t.title}</h3>
+              <p class="small">{t.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="poznasz-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="poznasz-h">Po czym poznasz, że działa.<span>Każdy punkt możesz sprawdzić samodzielnie.</span></h2>
+      </div>
+      <ul class="checks" data-reveal>
+        {
+          checks.map(([title, text]) => (
+            <li>
+              <span class="cs-state is-ok"><Icon name="check" size={12} /></span>
+              <p class="small"><strong>{title}</strong>{text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <Band title="Masz agenta, który działa tylko na pokazie?" sub="Opisz, co ma robić. Powiemy, czego mu brakuje." />
+</Base>

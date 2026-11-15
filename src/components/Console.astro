@@ -1,0 +1,120 @@
+---
+/**
+ * Scena z konsolą demo. Stan początkowy powstaje w buildzie z tych samych funkcji,
+ * których używa przeglądarka, więc po załadowaniu skryptu nic się nie przesuwa.
+ * Skrypt okna (lib/console/client.ts) ładuje się dopiero, gdy scena zbliża się do ekranu.
+ */
+import '../styles/console.css';
+import { CAPTIONS, SCENARIO_TITLES } from '../lib/console/data.ts';
+import { initialState } from '../lib/console/model.ts';
+import { ICONS, renderConsole } from '../lib/console/templates.ts';
+import { typo } from '../lib/typography.ts';
+
+interface Props {
+  uid: string;
+  /** Czy okno ma samo pokazywać scenariusze, dopóki nikt go nie dotknie. */
+  autoplay?: boolean;
+  wide?: boolean;
+}
+const { uid, autoplay = false, wide = false } = Astro.props;
+const palette = '<svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 5.5 2.5 2.5L4 10.5M8.5 10.75h3.5"/><rect x="1.5" y="2.5" width="13" height="11" rx="2.5"/></svg>';
+const dock = [
+  { id: 'palette', label: 'Paleta poleceń', icon: palette },
+  { id: 'deploy', label: SCENARIO_TITLES.deploy, icon: ICONS.server },
+  { id: 'flow', label: SCENARIO_TITLES.flow, icon: ICONS.flow },
+  { id: 'redteam', label: SCENARIO_TITLES.redteam, icon: ICONS.shield },
+];
+---
+
+<div class="stage" data-console-stage>
+  <div class="stage-frame">
+    <div class="stage-art" aria-hidden="true"></div>
+    <p class="stage-bar mono" data-no-typo>
+      <b>skibi</b>
+      <span>sesja demo</span>
+      <span class="wide">vps-klienta</span>
+      <span class="wide">dane fikcyjne</span>
+      <span class="push live">nic nie wychodzi do sieci</span>
+    </p>
+    <div
+      class:list={['cs', wide && 'cs-wide']}
+      data-console
+      data-uid={uid}
+      data-view="palette"
+      data-autoplay={autoplay ? 'true' : 'false'}
+      role="group"
+      aria-label="Konsola demo Skibi Labs — symulacja"
+      set:html={renderConsole(initialState, uid)}
+    />
+    <div class="dock" role="group" aria-label="Widoki konsoli">
+      {
+        dock.map((d, i) => (
+          <button type="button" class:list={['dock-btn', i === 0 && 'is-on']} data-dock={d.id} aria-pressed={i === 0 ? 'true' : 'false'} aria-label={d.label}>
+            <Fragment set:html={d.icon} />
+            <span class="dock-tip" aria-hidden="true">{d.label}</span>
+          </button>
+        ))
+      }
+    </div>
+  </div>
+  <p class="stage-caption">
+    <strong data-caption-lead>{typo(CAPTIONS.palette[0])}</strong>
+    <span data-caption-rest>{typo(CAPTIONS.palette[1])}</span>
+  </p>
+</div>
+
+<script>
+  // Lekki rozrusznik: właściwy skrypt konsoli pobieramy, gdy okno zbliża się do ekranu
+  // albo gdy ktoś sięgnie po skrót klawiszowy.
+  const roots = [...document.querySelectorAll<HTMLElement>('[data-console]')];
+  if (roots.length > 0) {
+    let pending: Promise<typeof import('../lib/console/client.ts')> | undefined;
+    const load = (): Promise<typeof import('../lib/console/client.ts')> => {
+      pending ??= import('../lib/console/client.ts');
+      return pending;
+    };
+    const start = (): void => {
+      void load().then((m) => m.mountAll());
+    };
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          io.disconnect();
+          start();
+        }
+      },
+      { rootMargin: '600px 0px' },
+    );
+    for (const r of roots) {
+      io.observe(r);
+      // Dotknięcie okna przed załadowaniem skryptu: ładujemy i powtarzamy kliknięcie.
+      r.addEventListener(
+        'click',
+        (e) => {
+          if (r.dataset['ready'] === 'true') return;
+          const target = e.target;
+          void load().then((m) => {
+            m.mountAll();
+            if (target instanceof HTMLElement && target.isConnected) target.click();
+          });
+        },
+        { once: true },
+      );
+    }
+    document.addEventListener('keydown', (e) => {
+      const el = e.target;
+      const typing = el instanceof HTMLElement && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName));
+      const slash = e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey && !typing;
+      const cmdK = e.key.toLowerCase() === 'k' && (e.metaKey || e.ctrlKey) && !e.altKey && !e.shiftKey;
+      if (!slash && !cmdK) return;
+      e.preventDefault();
+      void load().then((m) => m.mountAll()?.focus());
+    });
+    for (const opener of document.querySelectorAll<HTMLElement>('[data-open-console]')) {
+      opener.addEventListener('click', (e) => {
+        e.preventDefault();
+        void load().then((m) => m.mountAll()?.focus());
+      });
+    }
+  }
+</script>

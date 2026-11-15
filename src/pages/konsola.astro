@@ -1,0 +1,68 @@
+---
+import Band from '../components/Band.astro';
+import Console from '../components/Console.astro';
+import Icon from '../components/Icon.astro';
+import PageHero from '../components/PageHero.astro';
+import Base from '../layouts/Base.astro';
+import '../styles/page.css';
+
+const scenarios = [
+  { icon: 'server', title: 'Wdrożenie agenta', text: 'Sześć kroków uruchomienia, stan czterech usług, uprawnienia narzędzi i pierwsze wykonane zadanie.', href: '/agenci/' },
+  { icon: 'flow', title: 'Przebieg przepływu', text: 'Ślad wykonania na osi czasu: błąd zewnętrznego systemu, odczekanie, ponowienie i zapis wyniku.', href: '/automatyzacja/' },
+  { icon: 'shield', title: 'Test red team', text: 'Siedem prób z czterech klas problemów: które agent odparł, które przeszły i co poprawić.', href: '/bezpieczenstwo/' },
+] as const;
+---
+
+<Base
+  title="Konsola demo"
+  description="Symulacja konsoli Skibi Labs: wdrożenie agenta na serwerze, przebieg przepływu i test red team. Sterowanie klawiaturą i dotykiem, dane fikcyjne."
+>
+  <PageHero
+    eyebrow="Konsola demo"
+    title="Trzy scenariusze, jedna paleta poleceń"
+    lead="Wpisz polecenie, wybierz strzałkami i naciśnij Enter. To symulacja: dane są fikcyjne i nic nie wychodzi do sieci."
+    actions={false}
+  />
+
+  <section aria-label="Konsola">
+    <div class="container">
+      <Console uid="full" wide />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="scenariusze-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="scenariusze-h">Co pokazuje każde polecenie.<span>Po jednym na każdy rodzaj pracy.</span></h2>
+      </div>
+      <ul class="tiles">
+        {
+          scenarios.map((s) => (
+            <li class="tile card" data-reveal>
+              <span class="tile-icon"><Icon name={s.icon} size={18} /></span>
+              <h3 class="h3">{s.title}</h3>
+              <p class="small">{s.text}</p>
+              <a class="link" href={s.href}>Więcej o tej pracy <Icon name="arrow" size={14} /></a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="skroty-h">
+    <div class="container-sm">
+      <div class="section-head" data-reveal>
+        <h2 class="duo" id="skroty-h">Skróty.<span>Wszystko działa też dotykiem.</span></h2>
+      </div>
+      <dl class="shortcuts" data-reveal>
+        <div><dt>Otwórz konsolę z dowolnego miejsca strony</dt><dd><kbd class="kbd">/</kbd><kbd class="kbd">Ctrl K</kbd></dd></div>
+        <div><dt>Wybierz polecenie albo wiersz wyniku</dt><dd><kbd class="kbd">↑</kbd><kbd class="kbd">↓</kbd></dd></div>
+        <div><dt>Uruchom, pokaż wynik albo uruchom ponownie</dt><dd><kbd class="kbd">Enter</kbd></dd></div>
+        <div><dt>Wróć do palety</dt><dd><kbd class="kbd">Esc</kbd></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <Band title="Chcesz zobaczyć to na własnym przypadku?" sub="Opisz, co chcesz uruchomić albo sprawdzić." />
+</Base>

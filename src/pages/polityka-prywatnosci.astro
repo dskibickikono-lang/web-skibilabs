@@ -1,0 +1,68 @@
+---
+import PageHero from '../components/PageHero.astro';
+import { addressLine, company } from '../config/company.ts';
+import Base from '../layouts/Base.astro';
+import '../styles/page.css';
+
+const address = addressLine();
+const who = company.legalName ?? company.brand;
+---
+
+<Base title="Polityka prywatności" description="Jak Skibi Labs przetwarza dane osobowe: strona nie używa cookies ani narzędzi śledzących, dane pojawiają się dopiero w korespondencji.">
+  <PageHero
+    eyebrow="Polityka prywatności"
+    title="Strona, która niczego o Tobie nie zapisuje"
+    lead="Nie używamy cookies, analityki ani zasobów z zewnętrznych serwerów. Dane osobowe pojawiają się dopiero wtedy, gdy do nas napiszesz."
+    actions={false}
+  />
+  <section class="section-tight">
+    <div class="container-xs prose">
+      <h2>Administrator danych</h2>
+      <p>
+        Administratorem danych jest {who}{company.nip && <>, NIP {company.nip}</>}{company.regon && <>, REGON {company.regon}</>}{address && <>, {address}</>}.
+        {
+          company.email ? (
+            <> W sprawach danych osobowych napisz na adres <a class="inline-link" href={`mailto:${company.email}`}>{company.email}</a>.</>
+          ) : (
+            <> <span data-placeholder>Adres e-mail do spraw danych osobowych: do uzupełnienia przed publikacją.</span></>
+          )
+        }
+      </p>
+
+      <h2>Co dzieje się, gdy przeglądasz stronę</h2>
+      <ul>
+        <li>Strona nie zapisuje plików cookies i nie korzysta z pamięci przeglądarki (localStorage, sessionStorage).</li>
+        <li>Nie ma tu analityki, pikseli reklamowych ani osadzonych treści z innych serwisów. Kroje pisma i grafiki są podawane z tego samego serwera co strona.</li>
+        <li>Konsola demo działa w całości w Twojej przeglądarce. To, co w niej wpiszesz, nie jest nigdzie wysyłane.</li>
+        <li>Serwer, na którym stoi strona, może zapisywać standardowe logi techniczne (adres IP, czas żądania, adres strony). Służą wyłącznie do utrzymania i ochrony serwera.</li>
+      </ul>
+
+      <h2>Co dzieje się, gdy do nas napiszesz</h2>
+      <p>
+        Formularz kontaktowy nie wysyła danych na nasz serwer. Przygotowuje wiadomość e-mail, którą wysyłasz ze swojej skrzynki.
+        Od tej chwili przetwarzamy dane, które w niej podasz: imię i nazwisko, adres e-mail, nazwę firmy i treść wiadomości.
+      </p>
+      <ul>
+        <li><strong>Cel:</strong> odpowiedź na zapytanie i przygotowanie oferty.</li>
+        <li><strong>Podstawa prawna:</strong> działania przed zawarciem umowy podjęte na Twoje żądanie (art. 6 ust. 1 lit. b RODO) oraz nasz prawnie uzasadniony interes, jakim jest prowadzenie korespondencji (art. 6 ust. 1 lit. f RODO).</li>
+        <li><strong>Czas:</strong> przez okres prowadzenia korespondencji, a jeśli dojdzie do współpracy — przez czas jej trwania i okres wymagany przepisami.</li>
+        <li><strong>Odbiorcy:</strong> dostawca poczty elektronicznej i dostawca hostingu, wyłącznie w zakresie potrzebnym do świadczenia tych usług.</li>
+      </ul>
+
+      <h2>Twoje prawa</h2>
+      <p>
+        Możesz żądać dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i przeniesienia, a także wnieść sprzeciw wobec przetwarzania.
+        Masz też prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych.
+      </p>
+
+      <h2>Testy bezpieczeństwa</h2>
+      <p>
+        Dane, z którymi stykamy się podczas audytu albo testu red team, przetwarzamy wyłącznie na podstawie umowy z klientem i w uzgodnionym zakresie.
+        Opisują to <a class="inline-link" href="/jak-pracujemy/#autoryzacja">zasady autoryzacji testów</a>.
+      </p>
+
+      <h2>Zmiany</h2>
+      <p>Jeśli sposób działania strony się zmieni — na przykład pojawi się formularz wysyłany na serwer — zaktualizujemy tę stronę, zanim zmiana wejdzie w życie.</p>
+    </div>
+  </section>
+</Base>
