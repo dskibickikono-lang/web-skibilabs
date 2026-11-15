@@ -16,7 +16,7 @@ const d = company.declarations;
     lead="Formularz niczego nie wysyła na serwer. Przygotowuje wiadomość, którą wysyłasz ze swojej poczty."
     actions={false}
   >
-    <div class="contact figure-free">
+    <div class="contact">
       <form class="form card" data-contact data-to={company.email ?? ''} action={`mailto:${company.email ?? ''}`} method="post" enctype="text/plain" novalidate>
         <div class="field">
           <label for="f-name">Imię i nazwisko</label>

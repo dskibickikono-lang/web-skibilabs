@@ -50,25 +50,50 @@ const indexable = isPublishBuild(process.env) && !noindex;
     </main>
     <Footer />
     <script>
-      // Odsłanianie sekcji. Odsłaniamy też to, co zostało nad oknem (skok kotwicą,
-      // odświeżenie w połowie strony), żeby nic nie zostało niewidoczne.
-      const items = document.querySelectorAll<HTMLElement>('[data-reveal]');
-      if (items.length > 0) {
+      // Odsłanianie sekcji. Obserwator wejść zgłasza tylko zmianę stanu, więc element
+      // „przeskoczony” szybkim przewinięciem albo skokiem do kotwicy nigdy by się nie
+      // pokazał. Dlatego przy każdym przewinięciu odsłaniamy też wszystko, co jest
+      // nad dolną krawędzią okna — także to, co zostało nad oknem.
+      const pending = new Set(document.querySelectorAll<HTMLElement>('[data-reveal]'));
+      if (pending.size > 0) {
+        const show = (el: HTMLElement): void => {
+          el.classList.add('is-in');
+          pending.delete(el);
+        };
         if (!('IntersectionObserver' in window)) {
-          for (const el of items) el.classList.add('is-in');
+          for (const el of [...pending]) show(el);
         } else {
           const io = new IntersectionObserver(
             (entries) => {
               for (const e of entries) {
                 if (e.isIntersecting || e.boundingClientRect.top < 0) {
-                  e.target.classList.add('is-in');
                   io.unobserve(e.target);
+                  show(e.target as HTMLElement);
                 }
               }
             },
             { rootMargin: '0px 0px -8% 0px' },
           );
-          for (const el of items) io.observe(el);
+          for (const el of pending) io.observe(el);
+          let queued = false;
+          const sweep = (): void => {
+            queued = false;
+            const limit = window.innerHeight * 0.92;
+            for (const el of [...pending]) {
+              if (el.getBoundingClientRect().top < limit) {
+                io.unobserve(el);
+                show(el);
+              }
+            }
+            if (pending.size === 0) window.removeEventListener('scroll', onScroll);
+          };
+          const onScroll = (): void => {
+            if (!queued) {
+              queued = true;
+              requestAnimationFrame(sweep);
+            }
+          };
+          window.addEventListener('scroll', onScroll, { passive: true });
         }
       }
     </script>

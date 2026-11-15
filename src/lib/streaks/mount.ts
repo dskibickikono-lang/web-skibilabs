@@ -7,8 +7,16 @@ import { BG, FRAGMENT, PRESETS, VERTEX, type StreakPreset } from './shader.ts';
 
 export function mountStreaks(canvas: HTMLCanvasElement): void {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const gl = canvas.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' });
+  // Bez akceleracji sprzętowej (SwiftShader, llvmpipe) shader liczy procesor i blokuje
+  // stronę na sekundy — wtedy zostaje statyczny kadr. Przeglądarka odmawia kontekstu
+  // sama (`failIfMajorPerformanceCaveat`), a nazwę renderera sprawdzamy na wszelki wypadek.
+  // `__forceStreaks` służy wyłącznie do nagrań w środowisku bez GPU.
+  const forced = (window as Window & { __forceStreaks?: boolean }).__forceStreaks === true;
+  const gl = canvas.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power', failIfMajorPerformanceCaveat: !forced });
   if (!gl) return;
+  const info = gl.getExtension('WEBGL_debug_renderer_info');
+  const renderer = info ? String(gl.getParameter(info.UNMASKED_RENDERER_WEBGL)) : '';
+  if (!forced && /swiftshader|llvmpipe|software|basic render/i.test(renderer)) return;
 
   const compile = (type: number, src: string): WebGLShader | null => {
     const s = gl.createShader(type);

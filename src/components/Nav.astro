@@ -8,7 +8,7 @@ const current = (href: string): boolean => path === href || path === href.replac
 
 <header class="nav" data-nav>
   <div class="nav-card">
-    <a class="nav-logo" href="/" aria-label="Skibi Labs — strona główna"><Logo /><span>Skibi Labs</span></a>
+    <a class="nav-logo" href="/" aria-label="Skibi Labs — strona główna"><Logo uid="nav" /><span>Skibi Labs</span></a>
     <nav class="nav-links" aria-label="Główna">
       <ul>
         {
@@ -209,6 +209,7 @@ const current = (href: string): boolean => path === href || path === href.replac
       display: block;
       position: static;
       transform: none;
+      flex: 1 1 0;
       min-width: 0;
       margin-left: var(--s-16);
       overflow-x: auto;

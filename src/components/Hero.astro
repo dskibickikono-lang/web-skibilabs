@@ -48,6 +48,8 @@ import { company } from '../config/company.ts';
     padding: calc(var(--nav-h) + var(--nav-top)) var(--gutter) var(--s-12);
     text-align: center;
     isolation: isolate;
+    /* Tło wchodzi ze skalą 1,04 — nie może na ten czas poszerzać strony. */
+    overflow-x: clip;
   }
   .hero-art {
     position: absolute;

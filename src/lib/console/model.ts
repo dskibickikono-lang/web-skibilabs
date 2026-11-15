@@ -113,7 +113,8 @@ export function reduce(state: ConsoleState, action: Action): ConsoleState {
     case 'open':
       return { ...state, view: action.id, tick: 0, focus: 0, pinned: false };
     case 'back':
-      return state.view === 'palette' ? { ...state, query: '', selected: 0 } : { ...state, view: 'palette', tick: 0, focus: 0, pinned: false };
+      // Powrót zawsze daje czystą paletę: puste pole i pierwsze polecenie.
+      return { ...initialState };
     case 'tick': {
       if (state.view === 'palette') return state;
       const len = scenarioLength(state.view);

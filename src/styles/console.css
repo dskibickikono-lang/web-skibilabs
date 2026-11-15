@@ -830,6 +830,15 @@ button.cs-action:disabled {
   color: var(--fg);
 }
 
+@media (max-width: 960px) {
+  .cs,
+  .cs-wide {
+    --cs-h: 520px;
+  }
+  .cs-ev {
+    height: 40px;
+  }
+}
 @media (max-width: 720px) {
   .stage-frame {
     padding: 0 var(--s-8) var(--s-24);

@@ -53,7 +53,7 @@ void main() {
   float cover = 0.0;
   float haze = 0.0;
   float grainy = 0.0;
-  float pitch = 0.098;
+  float pitch = 0.118;
 
   for (int i = 0; i < N; i++) {
     float fi = float(i);
@@ -63,10 +63,10 @@ void main() {
     float r2 = h11(fi + 17.0);
     float r3 = h11(fi + 41.0);
     // Środkowe pasy są szerokie i długie, skrajne przechodzą w cienkie linie.
-    float wide = 1.0 - smoothstep(3.2, 4.4, ak);
+    float wide = 1.0 - smoothstep(2.8, 3.7, ak);
     float c = k * pitch + (r1 - 0.5) * 0.012 * (1.0 - wide);
-    float w = pitch * mix(0.035 + 0.05 * r1, 0.9, wide);
-    float L = mix(0.3 + 0.25 * r2, mix(0.3, 0.44, 1.0 - ak / 4.0) * (0.86 + 0.28 * r2), wide);
+    float w = pitch * mix(0.03 + 0.04 * r1, 0.92, wide);
+    float L = mix(0.3 + 0.25 * r2, mix(0.3, 0.44, 1.0 - ak / 3.0) * (0.86 + 0.28 * r2), wide);
     float m = (r3 - 0.5) * mix(0.5, 0.2, wide) - k * 0.018
       + 0.06 * sin(uTime * (0.21 + 0.13 * r1) + r2 * 6.2831)
       + 0.025 * sin(uTime * 0.37 + fi * 1.7);
@@ -75,10 +75,10 @@ void main() {
     float side = d < 0.0 ? 1.0 : 0.62;
     float soft = smoothstep(0.5, 1.12, abs(d)) * side;
     float blur = mix(0.0016, 0.004, 1.0 - wide) * 0.6 + 0.075 * soft * soft * mix(0.35, 1.0, wide);
-    float x = v - c + (n - 0.5) * blur * 1.25;
+    float x = v - c + (n - 0.5) * blur * 0.55;
     float edgeA = smoothstep(-w * 0.5 - blur, -w * 0.5 + blur, x);
     float edgeB = 1.0 - smoothstep(w * 0.5 - blur * 0.5, w * 0.5 + blur * 0.5, x);
-    float env = 1.0 - smoothstep(0.78, 1.22, abs(d) + (n2 - 0.5) * 0.2 * soft);
+    float env = 1.0 - smoothstep(0.74, 1.24, abs(d) + (n2 - 0.5) * 0.08 * soft);
     float I = edgeA * edgeB * env;
     float g = clamp((x + w * 0.5) / max(w, 0.0001), 0.0, 1.0);
     // Cieniowanie w poprzek: ciemniej przy sąsiednim pasie, jaśniej przy ostrej krawędzi.
@@ -95,9 +95,9 @@ void main() {
     grainy = max(grainy, soft * env);
   }
 
-  col += uFringe * haze * (1.0 - cover) * (0.5 + 1.0 * n);
+  col += uFringe * haze * (1.0 - cover) * (0.8 + 0.4 * n);
   col *= uGain;
-  col *= 1.0 + (n - 0.5) * uGrain * mix(0.1, 1.5, grainy * grainy);
+  col *= 1.0 + (n - 0.5) * uGrain * mix(0.08, 1.0, grainy * grainy);
   col += (n2 - 0.5) * uGrain * 0.04 * haze;
 
   vec2 q = frag / uRes;
@@ -144,8 +144,8 @@ const palette = {
 } as const;
 
 export const PRESETS = {
-  hero: { angle: -0.9, zoom: 0.84, shift: [0, 0.03], seed: 3.1, time: 14, grain: 0.13, vignette: 0.14, gain: 1, ...palette },
-  heroMobile: { angle: -0.9, zoom: 0.8, shift: [0, 0.07], seed: 3.1, time: 14, grain: 0.13, vignette: 0.1, gain: 1, ...palette },
+  hero: { angle: -0.86, zoom: 0.76, shift: [0, 0.03], seed: 3.1, time: 14, grain: 0.13, vignette: 0.14, gain: 1, ...palette },
+  heroMobile: { angle: -0.88, zoom: 0.7, shift: [0, 0.07], seed: 3.1, time: 14, grain: 0.13, vignette: 0.1, gain: 1, ...palette },
   cardWide: { angle: -0.84, zoom: 2.3, shift: [-0.04, 0.02], seed: 8.4, time: 3, grain: 0.1, vignette: 0.02, gain: 0.8, ...palette },
   cardTall: { angle: -0.84, zoom: 2.6, shift: [0.05, -0.05], seed: 12.7, time: 9, grain: 0.14, vignette: 0.02, gain: 0.95, ...palette },
   footer: { angle: -0.84, zoom: 1.5, shift: [0, -0.16], seed: 5.2, time: 6, grain: 0.14, vignette: 0.1, gain: 0.85, ...palette },

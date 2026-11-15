@@ -96,6 +96,15 @@ function mount(root: HTMLElement): ConsoleHandle {
     else dispatch({ type: 'finish' });
   };
 
+  /**
+   * Pisanie w polu poza ekranem przerywa płynne przewijanie (przeglądarka sama
+   * dosuwa pole do krawędzi), więc przy pracy z klawiatury dosuwamy całe okno.
+   */
+  const ensureVisible = (): void => {
+    const r = root.getBoundingClientRect();
+    if (r.top < 96 || r.bottom > window.innerHeight) root.scrollIntoView({ block: 'center', behavior: 'auto' });
+  };
+
   const takeOver = (): void => {
     userTookOver = true;
     autoplayRun += 1;
@@ -105,6 +114,7 @@ function mount(root: HTMLElement): ConsoleHandle {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     takeOver();
     byKeyboard = true;
+    if (e.key.length === 1 || e.key === 'Enter' || e.key.startsWith('Arrow')) ensureVisible();
     const inPalette = state.view === 'palette';
     switch (e.key) {
       case 'ArrowDown':
@@ -137,6 +147,7 @@ function mount(root: HTMLElement): ConsoleHandle {
 
   input.addEventListener('input', () => {
     takeOver();
+    ensureVisible();
     dispatch({ type: 'query', value: input.value });
   });
 
@@ -197,7 +208,7 @@ function mount(root: HTMLElement): ConsoleHandle {
   const autoplay = async (): Promise<void> => {
     if (userTookOver || reducedMotion() || root.dataset['autoplay'] !== 'true') return;
     const run = ++autoplayRun;
-    const alive = (): boolean => run === autoplayRun && visible && !userTookOver;
+    const alive = (): boolean => run === autoplayRun && !userTookOver;
     const waitDone = async (): Promise<void> => {
       while (alive() && !isDone(state)) await sleep(200);
     };
@@ -223,21 +234,22 @@ function mount(root: HTMLElement): ConsoleHandle {
     }
   };
 
+  // Zegar scenariusza stoi tylko wtedy, gdy okna w ogóle nie widać. Autoodtwarzanie
+  // rusza dopiero, gdy widać go co najmniej w jednej trzeciej.
+  let showing = false;
   new IntersectionObserver(
     (entries) => {
       const entry = entries[entries.length - 1];
       if (!entry) return;
-      const was = visible;
       visible = entry.isIntersecting;
-      if (visible && !was) {
-        schedule();
-        void autoplay();
-      } else if (!visible) {
-        clearTimeout(timer);
-        autoplayRun += 1;
-      }
+      const enough = entry.isIntersecting && entry.intersectionRatio >= 0.34;
+      if (visible) schedule();
+      else clearTimeout(timer);
+      if (enough && !showing) void autoplay();
+      if (!enough && showing) autoplayRun += 1;
+      showing = enough;
     },
-    { threshold: 0.35 },
+    { threshold: [0, 0.35] },
   ).observe(root);
   visible = false;
 

@@ -415,6 +415,7 @@
 
 /* Formularz */
 .contact {
+  margin-top: var(--s-64);
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   gap: var(--s-64);
@@ -602,6 +603,10 @@ textarea.input {
   }
   .form {
     padding: var(--s-20);
+  }
+  .contact {
+    margin-top: var(--s-40);
+    gap: var(--s-40);
   }
   .band {
     padding-top: var(--s-48);
