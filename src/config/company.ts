@@ -56,12 +56,12 @@ export const company: CompanyConfig = {
   nip: '7441749535',
   regon: '389229155',
   address: {
-    street: 'ul. Gabriela Narutowicza 717',
-    postalCode: '14-200',
-    city: 'Iława',
+    street: 'ul. Złota 75A/7',
+    postalCode: '00-817',
+    city: 'Warszawa',
   },
   domain: null,
-  email: null,
+  email: 'kontakt@skibilabs.pl',
   declarations: {
     responseTime: '1 dzień roboczy',
     billing: 'stała cena za uzgodniony zakres',
@@ -70,10 +70,8 @@ export const company: CompanyConfig = {
   },
   references: [],
   pending: [
-    'domain — domena nie została podana',
-    'email — adres kontaktowy nie został podany',
+    'domain — nie podano wprost; adres e-mail wskazuje na skibilabs.pl, do potwierdzenia',
     'legalName — pełna nazwa podmiotu z formą prawną',
-    'address.street — w odpowiedzi było „717”; potwierdź, czy to numer 717, czy 7/17',
     'references — zaznaczono „mam”, ale treści nie podano; sekcja używa zamienników opartych na faktach',
   ],
   ownerConfirmation: {

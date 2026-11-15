@@ -229,15 +229,15 @@ podstrony 93–156 kB (budżet w audycie: 300 kB i 220 kB).
 
 ## 12. Czego nie sprawdzono i czego nie da się zrobić bez właściciela
 
-- **Płynność i wygląd na prawdziwym sprzęcie.** Animacja smug, rozmycia tła i przewijanie nie
-  były oglądane na ekranie z GPU — headless tego nie pokaże. Nagrania w tym katalogu pokazują
-  statyczny kadr hero.
+- **Płynność i wygląd na prawdziwym sprzęcie.** W headless nie da się ich ocenić — nagrania
+  w tym katalogu pokazują statyczny kadr hero. Właściciel obejrzał stronę na swoim laptopie
+  i 15 listopada 2026 odpowiedział: odbiór wizualny „przyjmuję”, płynność „płynnie”.
 - **Safari i Firefox.** Audyt działa wyłącznie w Chromium. iOS Safari nie był testowany.
 - **Program pocztowy.** Sprawdzono treść przygotowanej wiadomości; samo otwarcie `mailto:`
   zależy od urządzenia odwiedzającego.
-- **Dane firmy.** Brakuje domeny, adresu e-mail i pełnej nazwy podmiotu; numer budynku („717”
-  czy „7/17”) wymaga potwierdzenia. Do tego czasu `npm run gate` blokuje publikację, strony mają
-  `noindex`, a `robots.txt` zabrania indeksowania.
+- **Dane firmy.** Adres i e-mail kontaktowy są podane. Brakuje pełnej nazwy podmiotu; domena
+  nie została podana wprost (adres e-mail wskazuje na skibilabs.pl). Do tego czasu
+  `npm run gate` blokuje publikację, strony mają `noindex`, a `robots.txt` zabrania indeksowania.
 - **Referencje.** Nie podano treści — sekcja używa zamienników (punkt 8).
 - **Deklaracje.** Użyto dwóch potwierdzonych: odpowiedź w 1 dzień roboczy i stała cena za
   uzgodniony zakres. Zasady pracy, zasady autoryzacji testów i polityka prywatności są napisane
